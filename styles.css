@@ -1,0 +1,55 @@
+/* Classe personalizada para a fonte Dramaturgia Cuba */
+.dramaturgia-cu-header {
+    font-family: "Dramaturgia Cuba", "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 137%; /* Aumenta o tamanho da fonte em 37% */
+}
+
+.dramaturgia-cu-subheader {
+    font-family: "Dramaturgia Cuba", "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 137%; /* Aumenta o tamanho da fonte em 37% */
+}
+
+.dramaturgia-cu-category {
+    font-family: "Dramaturgia Cuba", "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 137%; /* Aumenta o tamanho da fonte em 37% */
+}
+
+/* Importa as fontes */
+@import url('https://fonts.googleapis.com/css2?family=Dramaturgia+Cuba&family=Dancing+Script:wght@400;700&display=swap');
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    body {
+        font-size: 120%; /* Ajusta o tamanho da fonte para telas menores */
+    }
+
+    header {
+        font-size: 120%; /* Ajusta o tamanho da fonte para telas menores */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    section {
+        font-size: 120%; /* Ajusta o tamanho da fonte para telas menores */
+    }
+
+    .product-category img {
+        width: 80%; /* Ajusta o tamanho das imagens para telas menores */
+    }
+
+    footer {
+        font-size: 120%; /* Ajusta o tamanho da fonte para telas menores */
+    }
+}
