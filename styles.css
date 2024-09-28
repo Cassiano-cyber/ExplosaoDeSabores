@@ -1,3 +1,144 @@
+body {
+    font-family: 'Dramaturgia Cuba', 'Dancing Script', cursive; /* Fonte principal e secundária */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    font-size: 130%; /* Aumenta o tamanho da fonte em 30% */
+}
+
+header {
+    background-color: #ff6347;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 130%; /* Aumenta o tamanho da fonte em 30% */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-size: 130%; /* Aumenta o tamanho da fonte em 30% */
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+section {
+    padding: 2em;
+    text-align: center;
+    background-color: #f8f8f8;
+    margin-bottom: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 130%; /* Aumenta o tamanho da fonte em 30% */
+}
+
+section#home {
+    background-color: #ffefd5;
+}
+
+section#products {
+    background-color: #fffacd;
+}
+
+section#menu {
+    background-color: #e0ffff;
+}
+
+.product-category {
+    margin-bottom: 40px; /* Aumenta o espaço abaixo de cada categoria de produto */
+}
+
+.product-category img {
+    display: block; /* Garante que as imagens fiquem uma abaixo da outra */
+    margin: 0 auto 20px; /* Centraliza a imagem e adiciona espaço abaixo dela */
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-category h3 {
+    color: #ff6347;
+    margin-top: 0.5em;
+    font-size: 137%; /* Aumenta o tamanho da fonte em 37% */
+}
+
+.product-category p {
+    color: #333;
+    font-size: 1.64em; /* Aumenta o tamanho da fonte dos parágrafos em 37% */
+    font-weight: bold; /* Destaca os parágrafos */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 130%; /* Aumenta o tamanho da fonte em 30% */
+}
+
+form {
+    margin-top: 2em;
+    font-size: 130%; /* Aumenta o tamanho da fonte em 30% */
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+form input {
+    padding: 0.5em;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 0.5em 1em;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #ffd700;
+}
+
+/* Ajusta o tamanho do banner e adiciona bordas arredondadas */
+section#home img {
+    width: 60%; /* Diminui o tamanho do banner */
+    max-width: 1200px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 /* Classe personalizada para a fonte Dramaturgia Cuba */
 .dramaturgia-cu-header {
     font-family: "Dramaturgia Cuba", "Dancing Script", cursive;
@@ -29,11 +170,11 @@
 /* Media Queries para Responsividade */
 @media (max-width: 768px) {
     body {
-        font-size: 120%; /* Ajusta o tamanho da fonte para telas menores */
+        font-size: 110%; /* Ajusta o tamanho da fonte para telas menores */
     }
 
     header {
-        font-size: 120%; /* Ajusta o tamanho da fonte para telas menores */
+        font-size: 110%; /* Ajusta o tamanho da fonte para telas menores */
     }
 
     nav ul li {
@@ -42,14 +183,14 @@
     }
 
     section {
-        font-size: 120%; /* Ajusta o tamanho da fonte para telas menores */
+        font-size: 110%; /* Ajusta o tamanho da fonte para telas menores */
     }
 
     .product-category img {
-        width: 80%; /* Ajusta o tamanho das imagens para telas menores */
+        width: 90%; /* Ajusta o tamanho das imagens para telas menores */
     }
 
     footer {
-        font-size: 120%; /* Ajusta o tamanho da fonte para telas menores */
+        font-size: 110%; /* Ajusta o tamanho da fonte para telas menores */
     }
 }
