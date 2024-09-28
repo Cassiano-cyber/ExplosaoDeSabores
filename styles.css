@@ -61,12 +61,15 @@ section#menu {
 
 .product-category {
     margin-bottom: 40px; /* Aumenta o espaço abaixo de cada categoria de produto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.product-category img {
+.product-category img, section#home img {
     display: block; /* Garante que as imagens fiquem uma abaixo da outra */
     margin: 0 auto 20px; /* Centraliza a imagem e adiciona espaço abaixo dela */
-    width: 100%;
+    width: 80vw; /* 80% da largura da viewport */
     max-width: 800px;
     height: auto;
     border-radius: 8px;
@@ -132,7 +135,7 @@ form button:hover {
 
 /* Ajusta o tamanho do banner e adiciona bordas arredondadas */
 section#home img {
-    width: 60%; /* Diminui o tamanho do banner */
+    width: 80vw; /* 80% da largura da viewport */
     max-width: 1200px;
     height: auto;
     border-radius: 15px;
@@ -186,8 +189,8 @@ section#home img {
         font-size: 110%; /* Ajusta o tamanho da fonte para telas menores */
     }
 
-    .product-category img {
-        width: 90%; /* Ajusta o tamanho das imagens para telas menores */
+    .product-category img, section#home img {
+        width: 90vw; /* Ajusta o tamanho das imagens para telas menores */
     }
 
     footer {
