@@ -1,9 +1,16 @@
+/* Importa as fontes */
+@import url('https://fonts.googleapis.com/css2?family=Dramaturgia+Cuba&family=Dancing+Script:wght@400;700&display=swap');
+
+/* Normalização de CSS */
+@import url('https://cdn.jsdelivr.net/npm/normalize.css/normalize.css');
+
 body {
-    font-family: 'Dramaturgia Cuba', 'Dancing Script', cursive; /* Fonte principal e secundária */
+    font-family: 'Dramaturgia Cuba', 'Dancing Script', cursive;
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
-    font-size: 130%; /* Aumenta o tamanho da fonte em 30% */
+    font-size: 130%;
+    color: #333;
 }
 
 header {
@@ -12,16 +19,17 @@ header {
     padding: 1em 0;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 130%; /* Aumenta o tamanho da fonte em 30% */
+    font-size: 130%;
 }
 
 nav ul {
+    display: flex;
+    justify-content: center;
     list-style-type: none;
     padding: 0;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 1em;
 }
 
@@ -30,11 +38,12 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
-    font-size: 130%; /* Aumenta o tamanho da fonte em 30% */
+    font-size: 130%;
 }
 
-nav ul li a:hover {
+nav ul li a:hover, nav ul li a:focus {
     color: #ffd700;
+    outline: 2px solid #ffd700;
 }
 
 section {
@@ -44,48 +53,42 @@ section {
     margin-bottom: 2em;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 130%; /* Aumenta o tamanho da fonte em 30% */
-}
-
-section#home {
-    background-color: #ffefd5;
-}
-
-section#products {
-    background-color: #fffacd;
-}
-
-section#menu {
-    background-color: #e0ffff;
+    font-size: 130%;
 }
 
 .product-category {
-    margin-bottom: 40px; /* Aumenta o espaço abaixo de cada categoria de produto */
+    margin-bottom: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .product-category img, section#home img {
-    display: block; /* Garante que as imagens fiquem uma abaixo da outra */
-    margin: 0 auto 20px; /* Centraliza a imagem e adiciona espaço abaixo dela */
-    width: 80vw; /* 80% da largura da viewport */
+    display: block;
+    margin: 0 auto 20px;
+    width: 80vw;
     max-width: 800px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-category img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .product-category h3 {
     color: #ff6347;
     margin-top: 0.5em;
-    font-size: 137%; /* Aumenta o tamanho da fonte em 37% */
+    font-size: 137%;
 }
 
 .product-category p {
     color: #333;
-    font-size: 1.64em; /* Aumenta o tamanho da fonte dos parágrafos em 37% */
-    font-weight: bold; /* Destaca os parágrafos */
+    font-size: 1.64em;
+    font-weight: bold;
 }
 
 footer {
@@ -96,12 +99,12 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    font-size: 130%; /* Aumenta o tamanho da fonte em 30% */
+    font-size: 130%;
 }
 
 form {
     margin-top: 2em;
-    font-size: 130%; /* Aumenta o tamanho da fonte em 30% */
+    font-size: 130%;
 }
 
 form label {
@@ -110,13 +113,19 @@ form label {
     font-weight: bold;
 }
 
-form input {
+form input, form textarea {
     padding: 0.5em;
     width: 100%;
     max-width: 300px;
     margin-bottom: 1em;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #ff6347;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 99, 71, 0.5);
 }
 
 form button {
@@ -126,49 +135,51 @@ form button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 form button:hover {
     background-color: #ffd700;
+    transform: scale(1.05);
 }
 
-/* Ajusta o tamanho do banner e adiciona bordas arredondadas */
-section#home img {
-    width: 80vw; /* 80% da largura da viewport */
-    max-width: 1200px;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+form button:focus {
+    outline: 2px solid #ffd700;
 }
 
-/* Classe personalizada para a fonte Dramaturgia Cuba */
-.dramaturgia-cu-header {
-    font-family: "Dramaturgia Cuba", "Dancing Script", cursive;
-    font-optical-sizing: auto;
+/* Lazy Loading para imagens */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* Estilos para títulos */
+h1, h2, h3 {
+    font-family: 'Dramaturgia Cuba', 'Dancing Script', cursive;
     font-weight: 400;
-    font-style: normal;
-    font-size: 137%; /* Aumenta o tamanho da fonte em 37% */
 }
 
-.dramaturgia-cu-subheader {
-    font-family: "Dramaturgia Cuba", "Dancing Script", cursive;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 137%; /* Aumenta o tamanho da fonte em 37% */
+/* Estilos para parágrafos */
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
 }
 
-.dramaturgia-cu-category {
-    font-family: "Dramaturgia Cuba", "Dancing Script", cursive;
-    font-optical-sizing: auto;
-    font-weight: 200;
-    font-style: normal;
-    font-size: 137%; /* Aumenta o tamanho da fonte em 37% */
+/* Configurações globais de margem e padding */
+body, header, nav ul, nav ul li, nav ul li a, section, .product-category, footer, form, form label, form input, form button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Importa as fontes */
-@import url('https://fonts.googleapis.com/css2?family=Dramaturgia+Cuba&family=Dancing+Script:wght@400;700&display=swap');
+/* Foco visível para botões e links */
+button:focus, a:focus {
+    outline: 2px solid #ffd700;
+}
 
 /* Media Queries para Responsividade */
 @media (max-width: 768px) {
@@ -197,3 +208,357 @@ section#home img {
         font-size: 110%; /* Ajusta o tamanho da fonte para telas menores */
     }
 }
+
+/* Animação de Fade-in para seções */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+section {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Flexbox para layout responsivo */
+.product-category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Grid Layout para produtos */
+.product-category {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .product-category {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .product-category {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* Adicione esta parte ao seu CSS existente */
+.hidden {
+    display: none;
+}
+
+.product-category ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.product-category ul li {
+    background-color: #ffefd5;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos adicionais para melhorar a aparência */
+body {
+    font-family: 'Dramaturgia Cuba', 'Dancing Script', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+header {
+    background-color: #ff6347;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+section {
+    padding: 2em;
+    text-align: center;
+    background-color: #f8f8f8;
+    margin-bottom: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section#home {
+    background-color: #ffefd5;
+}
+
+section#products {
+    background-color: #fffacd;
+}
+
+section#menu {
+    background-color: #e0ffff;
+}
+
+.product-category {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-category img, section#home img {
+    display: block;
+    margin: 0 auto 20px;
+    width: 80vw;
+    max-width: 800px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+    /* Continuação do CSS aprimorado */
+
+/* Ajusta o tamanho do banner e adiciona bordas arredondadas */
+section#home img {
+    width: 80vw; /* 80% da largura da viewport */
+    max-width: 1200px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Classe personalizada para a fonte Dramaturgia Cuba */
+.dramaturgia-cu-header {
+    font-family: "Dramaturgia Cuba", "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+}
+
+.dramaturgia-cu-subheader {
+    font-family: "Dramaturgia Cuba", "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.5em;
+}
+
+.dramaturgia-cu-category {
+    font-family: "Dramaturgia Cuba", "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.2em;
+}
+
+/* Formulário de Contato */
+form {
+    margin-top: 2em;
+    font-size: 1em;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 0.5em;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 0.5em 1em;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #ffd700;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    body {
+        font-size: 90%;
+    }
+
+    header {
+        font-size: 90%;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    section {
+        font-size: 90%;
+    }
+
+    .product-category img, section#home img {
+        width: 90vw;
+    }
+
+    footer {
+        font-size: 90%;
+    }
+}
+
+/* Lazy Loading para imagens */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* Flexbox para layout responsivo */
+.product-category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* SEO e Acessibilidade */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    font-family: 'Dramaturgia Cuba', 'Dancing Script', cursive;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Minificação de CSS */
+body, header, nav ul, nav ul li, nav ul li a, section, .product-category, footer, form, form label, form input, form button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cache e CDN */
+@import url('https://cdn.jsdelivr.net/npm/normalize.css/normalize.css');
+/* Continuação do CSS aprimorado */
+
+/* Ajusta o tamanho do banner e adiciona bordas arredondadas */
+section#home img {
+    width: 80vw; /* 80% da largura da viewport */
+    max-width: 1200px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Classe personalizada para a fonte Dramaturgia Cuba */
+.dramaturgia-cu-header {
+    font-family: "Dramaturgia Cuba", "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+}
+
+.dramaturgia-cu-subheader {
+    font-family: "Dramaturgia Cuba", "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.5em;
+}
+
+.dramaturgia-cu-category {
+    font-family: "Dramaturgia Cuba", "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.2em;
+}
+
+/* Formulário de Pedido */
+form {
+    margin-top: 1em;
+    font-size: 1em;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 0.5em;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 0.5em 1em;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #ffd700;
+}
+

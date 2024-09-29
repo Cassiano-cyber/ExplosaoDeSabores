@@ -15,45 +15,83 @@
         <h1 class="dramaturgia-cu-header">Explosão de Sabores</h1>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Produtos</a></li>
-                <li><a href="#menu">Cardápio</a></li>
+                <li><a href="#home" aria-label="Home">Home</a></li>
+                <li><a href="#products" aria-label="Produtos">Produtos</a></li>
+                <li><a href="#menu" aria-label="Cardápio">Cardápio</a></li>
+                <li><a href="#offers" aria-label="Ofertas">Ofertas</a></li>
+                <li><a href="#contact" aria-label="Contato">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home">
-        <h2 class="dramaturgia-cu-subheader">Bem-vindo à Explosão de Sabores!</h2>
-        <p>Descubra nossos salgados personalizados, salgados veganos e pizzas deliciosas.</p>
-        <img src="https://img.restaurantguru.com/rac9-Explosao-De-Sabores-menu.jpg" alt="Banner de Explosão de Sabores">
-    </section>
+<section id="home">
+    <h2 class="dramaturgia-cu-subheader">Bem-vindo à Explosão de Sabores!</h2>
+    <p>Descubra nossos salgados personalizados, salgados veganos e pizzas deliciosas.</p>
+    <img src="https://img.restaurantguru.com/rac9-Explosao-De-Sabores-menu.jpg" alt="Banner de Explosão de Sabores" loading="lazy" class="loaded">
+</section>
 
-    <section id="products">
-        <h2 class="dramaturgia-cu-subheader">Nossos Produtos</h2>
-        <div class="product-category">
-            <h3 class="dramaturgia-cu-category">Salgados Personalizados</h3>
-            <img src="https://manealimentos.com.br/wp-content/uploads/2020/09/salgado-esquina-comprar.jpg" alt="Salgados Personalizados">
-            <p>Receita: Misture os ingredientes escolhidos e molde os salgados ao seu gosto.</p>
-        </div>
-        <div class="product-category">
-            <h3 class="dramaturgia-cu-category">Salgados Veganos</h3>
-            <img src="https://th.bing.com/th/id/OIP.0d4JLumHvADzzxQK83BGBwHaE8?rs=1&pid=ImgDetMain" alt="Salgados Veganos">
-            <p>Receita: Utilize ingredientes veganos frescos para criar salgados deliciosos e saudáveis.</p>
-        </div>
-        <div class="product-category">
-            <h3 class="dramaturgia-cu-category">Pizzas</h3>
-            <img src="https://www.designi.com.br/images/preview/10006042.jpg" alt="Preparando Pizza">
-            <p>Receita: Escolha seus ingredientes favoritos e prepare sua própria pizza na nossa cozinha.</p>
-        </div>
-    </section>
+<section id="products">
+    <h2 class="dramaturgia-cu-subheader">Nossos Produtos</h2>
+    <div class="product-category">
+        <h3 class="dramaturgia-cu-category">Salgados Personalizados</h3>
+        <a href="https://seusite.com/salgados-personalizados" target="_blank">
+            <img src="https://manealimentos.com.br/wp-content/uploads/2020/09/salgado-esquina-comprar.jpg" alt="Salgados Personalizados" loading="lazy" class="loaded">
+        </a>
+        <p>Receita: Misture os ingredientes escolhidos e molde os salgados ao seu gosto.</p>
+    </div>
+    <div class="product-category">
+        <h3 class="dramaturgia-cu-category">Salgados Veganos</h3>
+        <a href="https://seusite.com/salgados-veganos" target="_blank">
+            <img src="https://th.bing.com/th/id/OIP.0d4JLumHvADzzxQK83BGBwHaE8?rs=1&pid=ImgDetMain" alt="Salgados Veganos" loading="lazy" class="loaded">
+        </a>
+        <p>Receita: Utilize ingredientes veganos frescos para criar salgados deliciosos e saudáveis.</p>
+    </div>
+    <div class="product-category">
+        <h3 class="dramaturgia-cu-category">Pizzas</h3>
+        <a href="https://seusite.com/pizzas" target="_blank">
+            <img src="https://www.designi.com.br/images/preview/10006042.jpg" alt="Preparando Pizza" loading="lazy" class="loaded">
+        </a>
+        <p>Receita: Escolha seus ingredientes favoritos e prepare sua própria pizza na nossa cozinha.</p>
+    </div>
+</section>
 
-    <section id="menu">
-        <h2 class="dramaturgia-cu-subheader">Cardápio</h2>
-        <img src="https://casaeconstrucao.org/wp-content/uploads/2022/03/11-modelo-simples-de-cardapio-para-salgados.jpg" alt="Cardápio de Salgados">
-        <p>Confira nosso cardápio completo de salgados e pizzas.</p>
-    </section>
-    <footer>
-        <p>© 2024 Explosão de Sabores. Todos os direitos reservados.</p>
-    </footer>
+<section id="offers">
+    <h2 class="dramaturgia-cu-subheader">Ofertas e Promoções</h2>
+    <p>Confira nossas ofertas e promoções especiais!</p>
+    <!-- Adicione aqui as ofertas e promoções -->
+</section>
+
+<section id="menu">
+    <h2 class="dramaturgia-cu-subheader">Cardápio</h2>
+    <img src="https://casaeconstrucao.org/wp-content/uploads/2022/03/11-modelo-simples-de-cardapio-para-salgados.jpg" alt="Cardápio de Salgados" loading="lazy" class="loaded">
+    <p>Confira nosso cardápio completo de salgados e pizzas.</p>
+</section>
+
+<section id="contact">
+    <h2 class="dramaturgia-cu-subheader">Contato</h2>
+    <form action="https://seusite.com/contato" method="post">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Mensagem:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2024 Explosão de Sabores. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+    // Script para adicionar a classe 'loaded' às imagens quando carregadas
+    document.addEventListener("DOMContentLoaded", function() {
+        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+        lazyImages.forEach(img => {
+            img.onload = () => img.classList.add('loaded');
+        });
+    });
+</script>
 </body>
 </html>
