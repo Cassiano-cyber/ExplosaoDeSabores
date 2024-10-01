@@ -3,5 +3,5 @@ git init
 git add README.md
 git commit -m "first commit"
 git branch -M main
-git remote add origin https://github.com/Cassiano-cyber/Explosao-de-Sabores.git
+git remote add origin https://www.explosaodesabores.com
 git push -u origin main
