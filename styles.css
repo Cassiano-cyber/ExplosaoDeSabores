@@ -75,7 +75,7 @@ nav ul li a:hover {
 
 /* Container principal */
 main {
-    padding-top: 6em;
+    padding-top: 7em;
     padding-bottom: 2em;
     display: flex;
     flex-direction: column;
@@ -134,21 +134,33 @@ section img:hover {
 }
 
 .product-category.salgados {
-    background-color: #ecbd66;
-    box-shadow: 0 4px 8px rgba(255, 165, 0, 0.6);
-    color: var(--light-color);
+    background-color: #f4f4f4; /* Cinza claro */
+    box-shadow: 0 4px 8px rgba(192, 192, 192, 0.6);
+    color: var(--dark-color);
+}
+
+.product-category.salgados:hover {
+    background-color: #e0e0e0; /* Cinza médio */
 }
 
 .product-category.salgados-veganos {
-    background-color: #77cf614d;
-    box-shadow: 0 4px 8px rgba(0, 128, 0, 0.6);
-    color: var(--light-color);
+    background-color: #d1e7dd; /* Verde claro */
+    box-shadow: 0 4px 8px rgba(144, 238, 144, 0.6);
+    color: var(--dark-color);
+}
+
+.product-category.salgados-veganos:hover {
+    background-color: #c0dfd1; /* Verde médio */
 }
 
 .product-category.pizzas {
-    background-color: #d8343894;
-    box-shadow: 0 4px 8px rgba(255, 0, 39, 0.6);
-    color: var(--light-color);
+    background-color: #fae5d3; /* Bege rosado */
+    box-shadow: 0 4px 8px rgba(255, 204, 153, 0.6);
+    color: var(--dark-color);
+}
+
+.product-category.pizzas:hover {
+    background-color: #f5d7bd; /* Bege mais escuro */
 }
 
 /* Responsividade para imagens em dispositivos móveis */
