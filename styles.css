@@ -1,5 +1,5 @@
 /* Importação de fontes e normalização */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Dramaturgia+Cuba&display=swap');
 @import url('https://cdn.jsdelivr.net/npm/normalize.css/normalize.css');
 
 /* Variáveis globais de estilo */
@@ -9,21 +9,21 @@
     --accent-color: #ff9900; /* Laranja vibrante */
     --background-color: #f5ddb0; /* Bege suave */
     --dark-color: #2c2c2c; /* Preto escuro */
-    --text-color: #1a1a1a; /* Preto para textos */
+    --text-color: #b7870e; /* Dourado para textos */
     --light-color: #ffffff; /* Branco */
-    --border-radius: 10px;
     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --border-radius: 10px;
     --transition-speed: 0.3s;
 }
 
 /* Estilização global */
 body {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Dramaturgia Cuba', 'Dancing Script', cursive;
     margin: 0;
     padding: 0;
     background-color: var(--background-color);
     color: var(--text-color);
-    font-size: 16px;
+    font-size: 1.2rem;
 }
 
 /* Header fixo e estilizado */
@@ -34,49 +34,47 @@ header {
     top: 0;
     width: 100%;
     z-index: 10;
-    padding: 0.8em; /* Reduzido */
+    padding: 1.5em 0;
     text-align: center;
     box-shadow: var(--box-shadow);
+    font-size: 1.5em;
 }
 
 header h1 {
-    margin: 1em 0 0; /* Ajustado para ficar mais abaixo */
-    font-size: 2.2em; /* Ligeiramente menor */
+    margin: 0;
+    font-size: 2.5em;
     text-shadow: 2px 2px var(--primary-color);
 }
 
-/* Botão do WhatsApp */
-.botao-whatsapp {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 40px;
-    right: 25px;
-    background-color: #25D366; /* Cor do WhatsApp */
-    border-radius: 50%;
-    text-align: center;
-    font-size: 30px;
-    z-index: 1000;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    color: #fff;
+/* Menu de navegação */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    align-items: center;
     justify-content: center;
-    transition: background-color 0.3s ease;
-    text-decoration: none; /* Remove o sublinhado */
+    gap: 2em;
 }
 
-.botao-whatsapp:hover {
-    background-color: #128C7E; /* Cor de hover do WhatsApp */
+nav ul li {
+    position: relative;
 }
 
-.fa-whatsapp {
-    margin-top: 3px;
+nav ul li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 1.2em;
+    padding: 0.5em 0;
+    display: block;
+}
+
+nav ul li a:hover {
+    text-shadow: 0 0 10px var(--secondary-color), 0 0 20px var(--secondary-color), 0 0 30px var(--secondary-color);
 }
 
 /* Container principal */
 main {
-    padding-top: 5em;
+    padding-top: 6em;
     padding-bottom: 2em;
     display: flex;
     flex-direction: column;
@@ -93,6 +91,7 @@ section {
     box-shadow: var(--box-shadow);
     padding: 2em;
     text-align: center;
+    margin-bottom: 2em;
 }
 
 section h2 {
@@ -104,7 +103,7 @@ section h2 {
 /* Ajuste de imagens responsivas */
 section img {
     width: 100%;
-    max-width: 400px; /* Reduzido para "Pizzas Sob Medida" */
+    max-width: 400px;
     height: auto;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
@@ -113,6 +112,49 @@ section img {
 
 section img:hover {
     transform: scale(1.05);
+}
+
+/* Categorias de produtos */
+.product-category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 2em;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.product-category img {
+    width: 600px;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin-bottom: 1em;
+}
+
+.product-category.salgados {
+    background-color: #ecbd66;
+    box-shadow: 0 4px 8px rgba(255, 165, 0, 0.6);
+    color: var(--light-color);
+}
+
+.product-category.salgados-veganos {
+    background-color: #77cf614d;
+    box-shadow: 0 4px 8px rgba(0, 128, 0, 0.6);
+    color: var(--light-color);
+}
+
+.product-category.pizzas {
+    background-color: #d8343894;
+    box-shadow: 0 4px 8px rgba(255, 0, 39, 0.6);
+    color: var(--light-color);
+}
+
+/* Responsividade para imagens em dispositivos móveis */
+@media (max-width: 768px) {
+    .product-category img {
+        width: 200px;
+    }
 }
 
 /* Botões gerais */
@@ -132,48 +174,33 @@ button:hover {
     transform: scale(1.1);
 }
 
-/* Estilo do carrinho */
-#cart {
-    list-style: none;
-    padding: 0;
-}
-
-#cart li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0.5em 0;
-    padding: 0.5em;
-    background-color: var(--background-color);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-}
-
-#cart .delete-item {
-    background-color: var(--dark-color);
-    color: var(--light-color);
-    padding: 0.3em;
-    font-size: 0.8em;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-}
-
-#cart .delete-item:hover {
-    background-color: var(--accent-color);
-}
-
-/* Rodapé */
-footer {
-    background-color: var(--dark-color);
-    color: var(--light-color);
+/* Botão WhatsApp fixo */
+.botao-whatsapp {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 25px;
+    background-color: #25D366; /* Cor do WhatsApp */
+    border-radius: 50%;
     text-align: center;
-    padding: 1em;
-    margin-top: 2em;
+    font-size: 30px;
+    z-index: 1000;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
 }
 
-footer p {
-    margin: 0;
-    font-size: 0.9em;
+.botao-whatsapp:hover {
+    background-color: #128C7E; /* Cor de hover do WhatsApp */
+}
+
+.fa-whatsapp {
+    margin-top: 3px;
 }
 
 /* Responsividade */
@@ -190,71 +217,4 @@ footer p {
         padding: 0.6em 1.2em;
         font-size: 0.9em;
     }
-}
-
-/* Seção de Avaliações */
-#avaliacoes {
-    background-color: var(--light-color);
-    padding: 2em;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    margin-top: 2em;
-    text-align: center;
-}
-
-#avaliacoes h2 {
-    font-size: 2em;
-    color: var(--primary-color);
-}
-
-#avaliacoes-lista {
-    margin-top: 1em;
-    list-style: none;
-    padding: 0;
-    text-align: left;
-}
-
-#avaliacoes-lista li {
-    display: flex;
-    align-items: center;
-    gap: 1em;
-    background-color: var(--background-color);
-    padding: 0.5em;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-}
-
-#avaliacoes-lista .estrela {
-    color: var(--secondary-color);
-    font-size: 1.2em;
-}
-
-#avaliacao-form {
-    margin-top: 1.5em;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-}
-
-#avaliacao-form input, #avaliacao-form textarea {
-    width: 100%;
-    padding: 0.75em;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1em;
-}
-
-#avaliacao-form button {
-    background-color: var(--primary-color);
-    color: var(--light-color);
-    border: none;
-    padding: 0.75em;
-    border-radius: 4px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#avaliacao-form button:hover {
-    background-color: var(--accent-color);
 }
