@@ -3,95 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explosão de Sabores</title>
-    <meta name="description" content="Descubra nossos salgados personalizados, salgados veganos e pizzas deliciosas na Explosão de Sabores.">
-    <meta name="keywords" content="salgados, veganos, pizzas, Explosão de Sabores">
-    <meta name="author" content="Explosão de Sabores">
+    <title>Explosão Crocante - Salgados e Pizzas</title>
+    <meta name="description" content="Explore nossos salgados personalizados, opções veganas e pizzas incríveis. Experimente o sabor único da Explosão Crocante!">
+    <meta name="keywords" content="salgados, pizzas, veganos, Explosão Crocante">
+    <meta name="author" content="Explosão Crocante">
+    <meta property="og:title" content="Explosão Crocante - Salgados e Pizzas">
+    <meta property="og:description" content="Descubra nossos deliciosos produtos e encomende online. Salgados personalizados, veganos e pizzas sob medida!">
+    <meta property="og:image" content="https://img.restaurantguru.com/rac9-Explosao-De-Sabores-menu.jpg">
+    <meta property="og:url" content="https://explosao-crocante.com">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dramaturgia+Cuba&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1 class="dramaturgia-cu-header">Explosão de Sabores</h1>
-        <nav>
-            <ul>
-                <li><a href="#home" aria-label="Home">Home</a></li>
-                <li><a href="#products" aria-label="Produtos">Produtos</a></li>
-                <li><a href="#menu" aria-label="Cardápio">Cardápio</a></li>
-                <li><a href="#offers" aria-label="Ofertas">Ofertas</a></li>
-                <li><a href="#contact" aria-label="Contato">Contato</a></li>
-            </ul>
+    <header class="bg-danger text-white text-center py-4">
+        <h1 class="mb-0" style="font-family: 'Dancing Script', cursive; font-size: 3rem;">Explosão Crocante</h1>
+        <nav class="navbar navbar-expand-lg navbar-light mt-3">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#products">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#reviews">Avaliações</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#contact">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
-<section id="home">
-    <h2 class="dramaturgia-cu-subheader">Bem-vindo à Explosão de Sabores!</h2>
-    <p>Descubra nossos salgados personalizados, salgados veganos e pizzas deliciosas.</p>
-    <img src="https://img.restaurantguru.com/rac9-Explosao-De-Sabores-menu.jpg" alt="Banner de Explosão de Sabores" loading="lazy" class="loaded">
-</section>
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="py-5 text-center bg-light">
+            <div class="container">
+                <h2 class="display-5 mb-4">Bem-vindo à Explosão Crocante!</h2>
+                <p class="lead">Delicie-se com nossos salgados personalizados, opções veganas e pizzas feitas sob medida para você.</p>
+                <img src="https://img.restaurantguru.com/rac9-Explosao-De-Sabores-menu.jpg" alt="Explosão Crocante" class="img-fluid rounded shadow-lg mt-4">
+            </div>
+        </section>
 
-<section id="products">
-    <h2 class="dramaturgia-cu-subheader">Nossos Produtos</h2>
-    <div class="product-category">
-        <h3 class="dramaturgia-cu-category">Salgados Personalizados</h3>
-        <a href="https://seusite.com/salgados-personalizados" target="_blank">
-            <img src="https://manealimentos.com.br/wp-content/uploads/2020/09/salgado-esquina-comprar.jpg" alt="Salgados Personalizados" loading="lazy" class="loaded">
-        </a>
-        <p>Receita: Misture os ingredientes escolhidos e molde os salgados ao seu gosto.</p>
-    </div>
-    <div class="product-category">
-        <h3 class="dramaturgia-cu-category">Salgados Veganos</h3>
-        <a href="https://seusite.com/salgados-veganos" target="_blank">
-            <img src="https://th.bing.com/th/id/OIP.0d4JLumHvADzzxQK83BGBwHaE8?rs=1&pid=ImgDetMain" alt="Salgados Veganos" loading="lazy" class="loaded">
-        </a>
-        <p>Receita: Utilize ingredientes veganos frescos para criar salgados deliciosos e saudáveis.</p>
-    </div>
-    <div class="product-category">
-        <h3 class="dramaturgia-cu-category">Pizzas</h3>
-        <a href="https://seusite.com/pizzas" target="_blank">
-            <img src="https://www.designi.com.br/images/preview/10006042.jpg" alt="Preparando Pizza" loading="lazy" class="loaded">
-        </a>
-        <p>Receita: Escolha seus ingredientes favoritos e prepare sua própria pizza na nossa cozinha.</p>
-    </div>
-</section>
+        <!-- Products Section -->
+        <section id="products" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Nossos Produtos</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card shadow-sm mb-4">
+                            <img src="https://manealimentos.com.br/wp-content/uploads/2020/09/salgado-esquina-comprar.jpg" class="card-img-top" alt="Salgados Personalizados">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Salgados Personalizados</h5>
+                                <p class="card-text">Escolha os ingredientes e sabores para criar o salgado perfeito.</p>
+                                <a href="#" class="btn btn-danger">Saiba Mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow-sm mb-4">
+                            <img src="https://th.bing.com/th/id/OIP.0d4JLumHvADzzxQK83BGBwHaE8?rs=1&pid=ImgDetMain" class="card-img-top" alt="Salgados Veganos">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Salgados Veganos</h5>
+                                <p class="card-text">Ingredientes frescos e veganos para um sabor saudável e delicioso.</p>
+                                <a href="#" class="btn btn-danger">Saiba Mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow-sm mb-4">
+                            <img src="https://www.designi.com.br/images/preview/10006042.jpg" class="card-img-top" alt="Pizzas">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Pizzas Sob Medida</h5>
+                                <p class="card-text">Monte sua pizza com os ingredientes que mais gosta.</p>
+                                <a href="#" class="btn btn-danger">Saiba Mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section id="offers">
-    <h2 class="dramaturgia-cu-subheader">Ofertas e Promoções</h2>
-    <p>Confira nossas ofertas e promoções especiais!</p>
-    <!-- Adicione aqui as ofertas e promoções -->
-</section>
+        <!-- Reviews Section -->
+        <section id="reviews" class="bg-light py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">O que nossos clientes dizem</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <blockquote class="blockquote text-center">
+                            <p class="mb-0">"Os melhores salgados que já provei! Atendimento excelente."</p>
+                            <footer class="blockquote-footer">Ana Clara</footer>
+                        </blockquote>
+                    </div>
+                    <div class="col-md-6">
+                        <blockquote class="blockquote text-center">
+                            <p class="mb-0">"As pizzas são incríveis! Recomendo para todos."</p>
+                            <footer class="blockquote-footer">João Pedro</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section id="menu">
-    <h2 class="dramaturgia-cu-subheader">Cardápio</h2>
-    <img src="https://casaeconstrucao.org/wp-content/uploads/2022/03/11-modelo-simples-de-cardapio-para-salgados.jpg" alt="Cardápio de Salgados" loading="lazy" class="loaded">
-    <p>Confira nosso cardápio completo de salgados e pizzas.</p>
-</section>
+        <!-- Contact Section -->
+        <section id="contact" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Entre em contato</h2>
+                <form action="https://wa.me/5517996780618" method="get" target="_blank" class="mx-auto" style="max-width: 600px;">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Mensagem</label>
+                        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-danger w-100">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
-<section id="contact">
-    <h2 class="dramaturgia-cu-subheader">Contato</h2>
-    <form action="https://seusite.com/contato" method="post">
-        <label for="name">Nome:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <label for="message">Mensagem:</label>
-        <textarea id="message" name="message" required></textarea>
-        <button type="submit">Enviar</button>
-    </form>
-</section>
+    <footer class="bg-danger text-white text-center py-3">
+        <p class="mb-0">© 2024 Explosão Crocante. Todos os direitos reservados.</p>
+    </footer>
 
-<footer>
-    <p>© 2024 Explosão de Sabores. Todos os direitos reservados.</p>
-</footer>
-
-<script>
-    // Script para adicionar a classe 'loaded' às imagens quando carregadas
-    document.addEventListener("DOMContentLoaded", function() {
-        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
-        lazyImages.forEach(img => {
-            img.onload = () => img.classList.add('loaded');
-        });
-    });
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
