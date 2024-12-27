@@ -19,6 +19,107 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color-light: #ff6347;
+            --secondary-color-light: #ffd700;
+            --background-color-light: #f5ddb0;
+            --text-color-light: #b7870e;
+            --primary-color-dark: #1c1c1c;
+            --secondary-color-dark: #ffffff;
+            --background-color-dark: #333333;
+            --text-color-dark: #ff6347;
+            --button-hover: #d32f2f;
+        }
+
+        body {
+            font-family: 'Dramaturgia Cuba', 'Dancing Script', cursive;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color-light);
+            font-size: 1.3rem;
+            color: var(--text-color-light);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        body.dark-mode {
+            background-color: var(--background-color-dark);
+            color: var(--text-color-dark);
+        }
+
+        header {
+            background-color: var(--primary-color-light);
+            color: var(--secondary-color-light);
+            padding: 1.5em 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 1.5em;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        body.dark-mode header {
+            background-color: var(--primary-color-dark);
+            color: var(--secondary-color-dark);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--secondary-color-light);
+            font-size: 1.2em;
+            padding: 0.5em 0;
+            display: block;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            text-shadow: 0 0 10px var(--secondary-color-light), 0 0 20px var(--secondary-color-light), 0 0 30px var(--secondary-color-light);
+        }
+
+        body.dark-mode nav ul li a {
+            color: var(--text-color-dark);
+        }
+
+        body.dark-mode nav ul li a:hover {
+            text-shadow: 0 0 10px var(--text-color-dark), 0 0 20px var(--text-color-dark), 0 0 30px var(--text-color-dark);
+        }
+
+        button {
+            background-color: var(--primary-color-light);
+            color: var(--secondary-color-light);
+            border: none;
+            padding: 0.75em;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: var(--button-hover);
+        }
+
+        body.dark-mode button {
+            background-color: var(--primary-color-dark);
+            color: var(--secondary-color-dark);
+        }
+
+        body.dark-mode button:hover {
+            background-color: var(--text-color-dark);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -107,5 +208,10 @@
     </footer>
 
     <script type="module" src="script.js"></script>
+    <script>
+        const toggleDarkMode = () => {
+            document.body.classList.toggle('dark-mode');
+        };
+    </script>
 </body>
 </html>
