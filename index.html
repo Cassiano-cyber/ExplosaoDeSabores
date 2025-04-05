@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore o melhor cardápio de salgados artesanais! Faça seu pedido online e saboreie nossas delícias crocantes.">
+    <meta name="keywords" content="salgados, coxinha, esfirra, lanches, delivery de salgados, quitutes">
+    <meta name="author" content="Explosão Crocante">
+
+    <meta property="og:title" content="Cardápio de Salgados | Explosão Crocante">
+    <meta property="og:description" content="Salgados crocantes e irresistíveis. Faça seu pedido e aproveite!">
+    <meta property="og:image" content="https://cdn.pixabay.com/photo/2016/11/29/08/24/bakery-1868396_1280.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cassiano-cyber.github.io/site-salgados/">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/promotions.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/drinks.css">
+    <link rel="stylesheet" href="css/social.css">
+    <link rel="stylesheet" href="css/comanda.css"> 
+    <link rel="stylesheet" href="css/reviews.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/decorative.css">
+    <link rel="stylesheet" href="css/fidelity.css">
+    <link rel="stylesheet" href="css/suggestions.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/theme-dark.css">
+    <title>Cardápio de Salgados | Explosão Crocante</title>
+</head>
+<body>
+    <!-- Botão de alternar tema flutuante -->
+    <div class="theme-toggle-floating">
+        <button id="toggleTheme" aria-label="Alternar entre tema claro e escuro">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+            <i class="fas fa-sun" aria-hidden="true"></i>
+        </button>
+    </div>
+
+    <header class="site-header">
+        <div class="header-nav-wrapper">
+            <div class="top-bar">
+                <div class="logo-container">
+                    <a href="#inicio">
+                        <img src="https://img.freepik.com/vetores-gratis/comida-de-coxinha-desenhada-a-mao_23-2148690785.jpg" alt="Logo Explosão Crocante" class="logo">
+                    </a>
+                    <div class="header-title">
+                        <h1>Explosão Crocante</h1>
+                    </div>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+            <nav class="main-nav" aria-label="Navegação principal">
+                <ul class="nav-links main-nav-links">
+                    <li><a href="#tipos">Cardápio</a></li>
+                    <li><a href="#promotions">Promoções</a></li>
+                    <li><a href="#carrinho">Carrinho</a></li>
+                    <li><a href="#fidelidade">Fidelidade</a></li>
+                    <li><a href="#sugestoes">Sugestões</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hero-section" id="inicio">
+            <div class="hero-overlay"></div>
+            <video autoplay loop muted playsinline class="hero-video">
+                <source src="https://cdn.pixabay.com/video/2017/08/25/11563-231234701_large.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos.
+            </video>
+            <div class="hero-content">
+                <h1>Explosão Crocante</h1>
+                <p>O Sabor que te Conquista</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="tipos" class="menu">
+         <!-- Linha Decorativa -->
+         <svg width="100%" height="50" viewBox="0 0 1000 50" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <path d="M0 25 Q250 -10 500 25 T1000 25" stroke="#D4A373" stroke-width="4" fill="none" />
+            <circle cx="0" cy="25" r="10" fill="#E5C07B" stroke="#B88A44" stroke-width="3" />
+            <circle cx="1000" cy="25" r="10" fill="#E5C07B" stroke="#B88A44" stroke-width="3" />
+        </svg>
+            <h2>Nosso Cardápio</h2>
+            <h3>Tipos de Salgado</h3>
+            <div class="carousel" id="tipos-salgado" role="list">
+                <div class="carousel-track" id="carousel-track-tipos">
+                    <article class="carousel-slide product" data-tipo="coxinha" role="listitem" aria-labelledby="coxinha-tipo-label">
+                        <img src="https://cdn.pixabay.com/photo/2019/04/27/23/07/coxinha-4161592_1280.jpg" alt="Coxinhas suculentas e crocantes" loading="lazy" width="300" height="200">
+                        <h3>Coxinhas</h3>
+                        <span id="coxinha-tipo-label" class="visually-hidden">Coxinhas</span>
+                        <button class="select-type cta" data-tipo="coxinha">Selecionar</button>
+                    </article>
+
+                    <article class="carousel-slide product" data-tipo="enroladinho" role="listitem" aria-labelledby="enroladinho-tipo-label">
+                        <img src="https://cdn.pixabay.com/photo/2017/02/27/14/20/salted-2103324_960_720.jpg" alt="Enroladinhos macios e deliciosos" loading="lazy" width="300" height="200">
+                        <h3>Enroladinhos</h3>
+                        <span id="enroladinho-tipo-label" class="visually-hidden">Enroladinhos</span>
+                         <button class="select-type cta"  data-tipo="enroladinho">Selecionar</button>
+                    </article>
+
+                    <article class="carousel-slide product" data-tipo="bolinha" role="listitem" aria-labelledby="bolinha-tipo-label">
+                        <img src="https://cdn.pixabay.com/photo/2021/03/29/17/11/chili-6134690_960_720.jpg" alt="Bolinhas recheadas" loading="lazy" width="300" height="200">
+                        <h3>Bolinhas</h3>
+                        <span id="bolinha-tipo-label" class="visually-hidden">Bolinhas</span>
+                        <button class="select-type cta"  data-tipo="bolinha">Selecionar</button>
+                    </article>
+
+                    <article class="carousel-slide product" data-tipo="empada" role="listitem" aria-labelledby="empada-tipo-label">
+                        <img src="https://cdn.pixabay.com/photo/2019/07/28/05/00/sweets-4367939_1280.jpg" alt="Empadas cremosas e saborosas" loading="lazy" width="300" height="200">
+                        <h3>Empadas</h3>
+                        <span id="empada-tipo-label" class="visually-hidden">Empadas</span>
+                         <button class="select-type cta"  data-tipo="empada">Selecionar</button>
+                    </article>
+
+                    <article class="carousel-slide product" data-tipo="tortinha" role="listitem" aria-labelledby="tortinha-tipo-label">
+                        <img src="https://images.pexels.com/photos/10885316/pexels-photo-10885316.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Tortinhas fresquinhas e nutritivas" loading="lazy" width="300" height="200">
+                        <h3>Tortinhas</h3>
+                        <span id="tortinha-tipo-label" class="visually-hidden">Tortinhas</span>
+                         <button class="select-type cta"  data-tipo="tortinha">Selecionar</button>
+                    </article>
+
+                    <article class="carousel-slide product" data-tipo="torta" role="listitem" aria-labelledby="torta-tipo-label">
+                        <img src="https://images.pexels.com/photos/1320744/pexels-photo-1320744.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Tortas suculentas com massa crocante" loading="lazy" width="300" height="200">
+                        <h3>Tortas (pedaço)</h3>
+                        <span id="torta-tipo-label" class="visually-hidden">Tortas</span>
+                         <button class="select-type cta" data-tipo="torta">Selecionar</button>
+                    </article>
+                </div>
+                <!-- Botões de navegação do carrossel -->
+                <div class="carousel-buttons">
+                    <button class="carousel-button prev" aria-label="Slide anterior" aria-controls="carousel-track-tipos">‹</button>
+                    <button class="carousel-button next" aria-label="Próximo slide" aria-controls="carousel-track-tipos">›</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="sabores-section" class="menu">
+            <h2>Sabores</h2>
+            <div class="carousel" id="sabores" role="list">
+                <div class="carousel-track" id="carousel-track-sabores">
+                    <!-- Os sabores serão inseridos dinamicamente via JavaScript -->
+                </div>
+                <div class="carousel-buttons">
+                    <button class="carousel-button prev" aria-label="Slide anterior" aria-controls="carousel-track-sabores">‹</button>
+                    <button class="carousel-button next" aria-label="Próximo slide" aria-controls="carousel-track-sabores">›</button>
+                </div>
+            </div>
+        </section>
+        <section id="selecao" class="selecao">
+            <h2>Comanda:</h2>
+            <div class="comanda-container">
+                <p>Tipo selecionado: <span id="tipo-selecionado">Nenhum</span></p>
+                <p>Sabor selecionado: <span id="sabor-selecionado">Nenhum</span></p>
+                <p>Os itens são adicionados automaticamente no carrinho!</p>
+            </div>
+        </section>
+         <!-- Linha Decorativa -->
+         <svg width="100%" height="50" viewBox="0 0 1000 50" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <path d="M0 25 Q250 -10 500 25 T1000 25" stroke="#D4A373" stroke-width="4" fill="none" />
+            <circle cx="0" cy="25" r="10" fill="#E5C07B" stroke="#B88A44" stroke-width="3" />
+            <circle cx="1000" cy="25" r="10" fill="#E5C07B" stroke="#B88A44" stroke-width="3" />
+        </svg>
+        <!-- Seção de Promoções -->
+        <section id="promotions" class="promotions">
+            <h2>Promoções Especiais</h2>
+            <div class="promotions-grid">
+               <!-- Promoção 1 -->
+               <article class="promotion-item product" data-name="Combo Coxinha" data-price="15.00">
+                <img src="https://cdn.pixabay.com/photo/2019/04/27/23/13/coxinha-4161606_1280.jpg" alt="Combo de coxinha e refrigerante com preço especial" width="300" height="200">
+                <h3>Combo Coxinha + Refrigerante</h3>
+                <p class="promotion-price">
+                    De <span class="tachado old-price">R$ 20,00</span> Por <span class="new-price">R$ 15,00</span>
+                </p>
+                <button class="add-to-cart cta" data-name="Combo Coxinha" data-price="15.00">Adicionar</button>
+            </article>
+
+               <!-- Promoção 2 -->
+               <article class="promotion-item product" data-name="Empada Gourmet" data-price="13.50">
+                <img src="https://cdn.pixabay.com/photo/2017/05/23/01/15/empanadas-2335902_1280.jpg" alt="Empada gourmet com ingredientes selecionados e desconto" width="300" height="200">
+                <h3>Empada Gourmet</h3>
+                <p class="promotion-price">
+                    De <span class="tachado old-price">R$ 15,00</span> Por <span class="new-price">R$ 13,50</span>
+                </p>
+                <button class="add-to-cart cta" data-name="Empada Gourmet" data-price="13.50">Adicionar</button>
+            </article>
+
+              <!-- Promoção 3 -->
+              <article class="promotion-item product" data-name="Enroladinho Especial" data-price="8.50">
+                <img src="https://cdn.pixabay.com/photo/2017/06/29/16/19/enroladinho-2454681_1280.jpg" alt="Enroladinho especial com receita exclusiva e preço promocional" width="300" height="200">
+                <h3>Enroladinho Especial</h3>
+                <p class="promotion-price">
+                    De <span class="tachado old-price">R$ 10,00</span> Por <span class="new-price">R$ 8,50</span>
+                </p>
+                <button class="add-to-cart cta" data-name="Enroladinho Especial" data-price="8.50">Adicionar</button>
+            </article>
+            </div>
+        </section>
+  <!-- Linha Decorativa -->
+  <svg width="100%" height="50" viewBox="0 0 1000 50" xmlns="http://www.w3.org/2000/svg" fill="none">
+    <path d="M0 25 Q250 -10 500 25 T1000 25" stroke="#D4A373" stroke-width="4" fill="none" />
+    <circle cx="0" cy="25" r="10" fill="#E5C07B" stroke="#B88A44" stroke-width="3" />
+    <circle cx="1000" cy="25" r="10" fill="#E5C07B" stroke="#B88A44" stroke-width="3" />
+</svg>
+         <!-- Seção de Bebidas -->
+        <section id="bebidas" class="bebidas">
+            <h2>Refresque-se com Nossas Bebidas</h2>
+           <div class="bebidas-grid">
+              <!-- Bebida 1 -->
+                <article class="bebida-item product" data-name="Coca-Cola Lata" data-price="5.00">
+                   <img src="https://cdn.pixabay.com/photo/2017/02/19/17/20/drink-2080332_1280.jpg" alt="Refrigerante Coca-Cola gelada em lata" width="300" height="200">
+                    <h3>Coca-Cola Lata</h3>
+                    <p>R$ 5,00</p>
+                   <button class="add-to-cart cta" data-name="Coca-Cola Lata" data-price="5.00">Adicionar</button>
+               </article>
+
+               <!-- Bebida 2 -->
+               <article class="bebida-item product" data-name="Suco Natural de Laranja" data-price="7.50">
+                 <img src="https://cdn.pixabay.com/photo/2021/07/04/23/01/oranges-6387749_640.jpg" alt="Suco natural de laranja espremido na hora" width="300" height="200">
+                 <h3>Suco Natural de Laranja</h3>
+                   <p>R$ 7,50</p>
+                   <button class="add-to-cart cta" data-name="Suco Natural de Laranja" data-price="7.50">Adicionar</button>
+                </article>
+
+               <!-- Bebida 3 -->
+               <article class="bebida-item product" data-name="Água saborizada" data-price="5.00">
+                 <img src="https://cdn.pixabay.com/photo/2016/07/21/11/17/drink-1532300_1280.jpg" alt="Água saborizada refrescante com frutas" width="300" height="200">
+                  <h3>Água saborizada</h3>
+                   <p>R$ 5,00</p>
+                  <button class="add-to-cart cta" data-name="Água saborizada" data-price="5.00">Adicionar</button>
+                </article>
+            </div>
+        </section>
+  <!-- Linha Decorativa -->
+  <svg width="100%" height="50" viewBox="0 0 1000 50" xmlns="http://www.w3.org/2000/svg" fill="none">
+    <path d="M0 25 Q250 -10 500 25 T1000 25" stroke="#D4A373" stroke-width="4" fill="none" />
+    <circle cx="0" cy="25" r="10" fill="#E5C07B" stroke="#B88A44" stroke-width="3" />
+    <circle cx="1000" cy="25" r="10" fill="#E5C07B" stroke="#B88A44" stroke-width="3" />
+</svg>
+<div class="container-coxinhas" style="background: linear-gradient(135deg, #800000, #A52A2A);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    font-family: --var(font-family);
+    font-weight: bold;
+    height: 300px;
+    transition: background 0.3s ease;">
+    <h2 class="avaliações" style="color: white;">AVALIAÇÕES</h2>
+
+    <div class="comentarios-container">
+        <div class="comentario">
+            <p style="font-size: 1.1em; margin-bottom: 10px;">
+                Salgados sempre fresquinhos e deliciosos! Aprovadíssimo!
+            </p>
+            <p style="font-weight: bold; margin-bottom: 5px;">Maria Silva</p>
+            <div style="color: gold; font-size: 1.2em;" data-rating="4.8"></div>
+        </div>
+        <div class="comentario">
+            <p style="font-size: 1.1em; margin-bottom: 10px;">
+                A coxinha de vocês é a melhor que já comi! Super recomendo.
+            </p>
+            <p style="font-weight: bold; margin-bottom: 5px;">João Pereira</p>
+            <div style="color: gold; font-size: 1.2em;" data-rating="4.5"></div>
+        </div>
+        <div class="comentario">
+            <p style="font-size: 1.1em; margin-bottom: 10px;">
+                Entrega rápida e salgados quentinhos. Perfeito para qualquer hora!
+            </p>
+            <p style="font-weight: bold; margin-bottom: 5px;">Ana Clara</p>
+            <div style="color: gold; font-size: 1.2em;" data-rating="4.3"></div>
+        </div>
+    </div>
+
+    <img src="https://supresalgados.com.br/wp-content/uploads/2024/11/coxinha1500px3-1024x1024.png" 
+        alt="Coxinha" id="coxinha1" class="coxinha" 
+        style="position: absolute; width: 130px; opacity: 0.8; left: 5%; top: 5%; transform: translateY(0) rotate(-5deg); transition: transform 0.5s ease-out;">
+
+    <img src="https://supresalgados.com.br/wp-content/uploads/2024/11/coxinha1500px3-1024x1024.png" 
+        alt="Coxinha" id="coxinha2" class="coxinha" 
+        style="position: absolute; width: 90px; opacity: 0.8; right: 5%; top: 8%; transform: translateY(0) rotate(175deg); transition: transform 0.5s ease-out;">
+
+    <img src="https://supresalgados.com.br/wp-content/uploads/2024/11/coxinha1500px3-1024x1024.png" 
+        alt="Coxinha" id="coxinha3" class="coxinha" 
+        style="position: absolute; width: 100px; opacity: 0.8; right: 10%; bottom: 30%; transform: translateY(0) rotate(5deg); transition: transform 0.5s ease-out;">
+
+    <img src="https://supresalgados.com.br/wp-content/uploads/2024/11/coxinha1500px3-1024x1024.png" 
+        alt="Coxinha" id="coxinha4" class="coxinha" 
+        style="position: absolute; width: 70px; opacity: 0.7; left: 45%; top: 62%; transform: translateY(0) rotate(-3deg); transition: transform 0.5s ease-out;">
+</div>
+
+   
+
+
+<script src="script.js"></script>
+ <!-- Seção de Fidelidade -->
+ <section id="fidelidade" class="cart">
+    <h2>Programa de Fidelidade</h2>
+    <div id="cadastro-fidelidade">
+        <h3>Cadastre-se para Ganhar Pontos!</h3>
+        <label for="nome-fidelidade">Nome:</label>
+        <input type="text" id="nome-fidelidade" placeholder="Digite seu nome">
+
+        <label for="telefone-fidelidade">Telefone (WhatsApp):</label>
+        <input type="tel" id="telefone-fidelidade" placeholder="Digite seu telefone">
+
+        <button id="cadastrar-fidelidade" class="button">Cadastrar</button>
+    </div>
+
+    <div id="carteira-digital" style="display: none;">
+        <h3>Sua Carteira Digital</h3>
+        <p>Olá, <span id="nome-cliente"></span>!</p>
+        <p>Seus pontos: <span id="pontos-cliente">0</span></p>
+        <p>Resgate seus pontos por descontos ou produtos grátis!</p>
+        <button id="resgatar-pontos" class="button">Resgatar Pontos</button>
+        <p>
+            <a id="link-whatsapp-fidelidade" href="#" target="_blank">
+                Fale conosco no WhatsApp
+            </a>
+        </p>
+    </div>
+</section>
+ <!-- Linha Decorativa -->
+ <svg width="100%" height="50" viewBox="0 0 1000 50" xmlns="http://www.w3.org/2000/svg" fill="none">
+    <path d="M0 25 Q250 -10 500 25 T1000 25" stroke="#D4A373" stroke-width="4" fill="none" />
+    <circle cx="0" cy="25" r="10" fill="#E5C07B" stroke="#B88A44" stroke-width="3" />
+    <circle cx="1000" cy="25" r="10" fill="#E5C07B" stroke="#B88A44" stroke-width="3" />
+</svg>
+<!-- Seção de Sugestões Inteligentes -->
+<section id="sugestoes" class="promotions">
+    <h2>Sugestões Personalizadas</h2>
+    <div id="sugestoes-produtos" class="promotions-grid">
+        <!-- As sugestões serão inseridas aqui via JavaScript -->
+    </div>
+</section>
+ <!-- Linha Decorativa -->
+ <svg width="100%" height="50" viewBox="0 0 1000 50" xmlns="http://www.w3.org/2000/svg" fill="none">
+    <path d="M0 25 Q250 -10 500 25 T1000 25" stroke="#D4A373" stroke-width="4" fill="none" />
+    <circle cx="0" cy="25" r="10" fill="#E5C07B" stroke="#B88A44" stroke-width="3" />
+    <circle cx="1000" cy="25" r="10" fill="#E5C07B" stroke="#B88A44" stroke-width="3" />
+</svg>
+        <!-- Seção do Carrinho -->
+        <section id="carrinho" class="cart">
+            <h2>Carrinho de Compras</h2>
+            <ul class="cart-list" aria-live="polite"></ul>
+            <p>Total: R$ <span id="total" aria-live="polite">0,00</span></p>
+
+            <!-- Opções de Entrega e Endereço (na seção principal do carrinho) -->
+            <div class="cart-options">
+                <label>
+                    <input type="radio" id="retirar-principal" name="delivery-principal" value="retirar" checked> Retirar no Local
+                </label>
+                <label>
+                    <input type="radio" id="entrega-principal" name="delivery-principal" value="entrega"> Entrega
+                </label>
+                <div id="endereco-container-principal">
+                    <label for="cep-principal">CEP:</label>
+                    <input type="text" id="cep-principal" placeholder="Digite seu CEP" maxlength="9">
+                    <button id="buscar-endereco-principal" class="button">Buscar Endereço</button>
+
+                    <div id="endereco-completo-principal" style="display: none;">
+                        <label for="rua-principal">Rua:</label>
+                        <input type="text" id="rua-principal" placeholder="Rua" readonly>
+
+                        <label for="numero-principal">Número:</label>
+                        <input type="text" id="numero-principal" placeholder="Número">
+
+                        <label for="complemento-principal">Complemento:</label>
+                        <input type="text" id="complemento-principal" placeholder="Complemento">
+
+                        <label for="bairro-principal">Bairro:</label>
+                        <input type="text" id="bairro-principal" placeholder="Bairro" readonly>
+
+                        <label for="cidade-principal">Cidade:</label>
+                        <input type="text" id="cidade-principal" placeholder="Cidade" readonly>
+
+                        <label for="estado-principal">Estado:</label>
+                        <input type="text" id="estado-principal" placeholder="Estado" readonly>
+                    </div>
+                </div>
+            </div>
+
+            <button id="checkoutButton" class="cta" aria-label="Finalizar pedido">🛒 Finalizar Pedido</button>
+        </section>
+
+        <!-- Ícone do carrinho fixo -->
+        <div class="cart-icon" onclick="toggleCart()">
+            🛒 <span id="cart-count">0</span>
+        </div>
+
+        <!-- Menu do Carrinho -->
+        <div class="cart-menu" id="cart-menu">
+            <button class="close-cart-button" aria-label="Fechar carrinho" onclick="toggleCart()">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <h2>Seu Carrinho</h2>
+            <ul id="cart-items"></ul>
+
+            <div class="cart-options">
+                <label>
+                    <input type="radio" id="retirar" name="delivery" value="retirar" checked> Retirar no Local
+                </label>
+                <label>
+                    <input type="radio" id="entrega" name="delivery" value="entrega"> Entrega
+                </label>
+                <div id="endereco-container">
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" placeholder="Digite seu CEP" maxlength="9">
+                    <button id="buscar-endereco" class="button">Buscar Endereço</button>
+
+                    <div id="endereco-completo" style="display: none;">
+                        <label for="rua">Rua:</label>
+                        <input type="text" id="rua" placeholder="Rua" readonly>
+
+                        <label for="numero">Número:</label>
+                        <input type="text" id="numero" placeholder="Número">
+
+                        <label for="complemento">Complemento:</label>
+                        <input type="text" id="complemento" placeholder="Complemento">
+
+                        <label for="bairro">Bairro:</label>
+                        <input type="text" id="bairro" placeholder="Bairro" readonly>
+
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" id="cidade" placeholder="Cidade" readonly>
+
+                        <label for="estado">Estado:</label>
+                        <input type="text" id="estado" placeholder="Estado" readonly>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-total-container">
+               <p>Total: <span id="cart-total" aria-live="polite">R$ 0,00</span></p>
+            </div>
+            <div class="checkout-container">
+                <button class="button" onclick="finalizarPedido()">Finalizar Pedido</button>
+            </div>
+        </div>
+    </main>
+    <!-- Rodapé do Site -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2025 Explosão Crocante. Todos os direitos reservados.</p>
+            <nav>
+                <ul class="footer-links">
+                    <li><a href="#tipos">Cardápio</a></li>
+                    <li><a href="#promotions">Promoções</a></li>
+                    <li><a href="#carrinho">Carrinho</a></li>
+                    <li>
+                         <a href="https://www.instagram.com/explosao_crocante_salgaderia/" target="_blank" rel="noopener noreferrer">
+                             <i class="fab fa-instagram"></i> Instagram
+                         </a>
+                     </li>
+                     <li>
+                         <a href="https://www.facebook.com/profile.php?id=61572630962138" target="_blank" rel="noopener noreferrer">
+                             <i class="fab fa-facebook"></i> Facebook
+                         </a>
+                </ul>
+
+            </nav>
+        </div>
+    </footer>
+     <!-- Botão do WhatsApp -->
+    <a href="https://wa.me/5517996780618?text=Olá,%20Eu%20gostaria%20de%20fazer%20um%20pedido."
+        target="_blank"
+       class="botao-whatsapp"
+        aria-label="Entre em contato pelo WhatsApp">
+         <i class="fab fa-whatsapp"></i>
+     </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!--Adicionar tempo de espera-->

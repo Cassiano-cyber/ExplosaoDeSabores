@@ -1,0 +1,47 @@
+/* Estilos para a seção Comanda */
+.selecao {
+    background-color: var(--background-light);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    text-align: center;
+}
+
+.selecao h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.comanda-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comanda-container p {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin: 5px 0;
+}
+
+.comanda-container span {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .selecao {
+        padding: 15px;
+    }
+
+    .selecao h2 {
+        font-size: 1.5rem;
+    }
+
+    .comanda-container p {
+        font-size: 1rem;
+    }
+}
