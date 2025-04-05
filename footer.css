@@ -1,0 +1,212 @@
+/* Estilos do Rodapé */
+.site-footer {
+    background-color: var(--footer-background);
+    padding: 20px 0;
+    text-align: center;
+    overflow: hidden;
+    /* Garante que nada ultrapasse as bordas */
+}
+
+.site-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* Permite que os elementos quebrem para a próxima linha */
+    padding: 10px;
+    /* Adicionado para garantir espaço interno */
+}
+
+.site-footer p {
+    color: var(--light-text);
+    margin: 0;
+    flex-basis: 50%;
+    /* Ajuste a porcentagem conforme necessário */
+    flex-shrink: 1;
+    /* Permite que o texto encolha se necessário */
+    padding-right: 10px;
+    /* Adiciona espaço entre o texto e os links */
+    text-align: left;
+    /* Alinha o texto à esquerda */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .site-footer p {
+    color: var(--dark-mode-text);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    /* Alinha os links à direita */
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    flex-basis: 50%;
+    /* Ajuste a porcentagem conforme necessário */
+    flex-shrink: 1;
+    /* Permite que os links encolham se necessário */
+    flex-wrap: wrap;
+    /* Permite que os itens de link quebrem para a próxima linha */
+}
+
+.footer-links li {
+    margin: 0;
+    /* Remove margens dos itens da lista */
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: var(--light-text);
+    font-size: 1.2rem;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    /* Impede quebras de linha dentro dos links */
+}
+
+.footer-links li a:hover {
+    color: var(--button-hover-color);
+}
+
+/* Melhorias na Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .carousel-slide img {
+        height: 300px;
+    }
+
+    .carousel-button {
+        padding: 10px;
+        font-size: medium;
+    }
+
+    .botao-whatsapp {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    /* Ajustes para telas menores */
+    .container {
+        padding: 0 10px;
+    }
+
+    .site-header .container {
+        flex-direction: column;
+        align-items: center;
+        /* Alinhar no centro */
+    }
+
+    .site-header h1,
+    .site-header p,
+    .site-header button {
+        margin: 10px 0;
+    }
+
+    .promotions-grid,
+    .bebidas-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        /* Ajuste no tamanho mínimo das colunas */
+    }
+
+    .bebida-item {
+        width: 100%;
+        /* Aumente o espaçamento entre os elementos */
+    }
+
+    .cart,
+    #carrinho {
+        transition: background-color 0.3s ease, color 0.3s ease;
+        /* Ajuste a transição para cada um */
+    }
+
+    /* Ajustes no Footer para telas menores */
+    .site-footer .container {
+        flex-direction: column;
+        /* Empilha os elementos */
+        text-align: center;
+        /* Centraliza o texto */
+    }
+
+    .site-footer p {
+        flex-basis: 100%;
+        /* Ocupa a largura total */
+        text-align: center;
+        /* Centraliza o texto */
+        padding-right: 0;
+        /* Remove padding */
+    }
+
+    .footer-links {
+        flex-basis: 100%;
+        /* Ocupa a largura total */
+        justify-content: center;
+        /* Centraliza os links */
+    }
+}
+
+/* Estilos adicionais */
+.bebidas-grid,
+.promotions-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* IMAGENS RESPONSIVAS */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    /* Evita espaços extras abaixo da imagem */
+}
+
+/* PROMOTION ITEMS */
+.promotion-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    /* Limita a largura dos itens */
+    margin: 0 10px;
+    /* Adiciona margem horizontal */
+}
+
+/* GRIDS */
+.bebidas-grid,
+.promotions-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Evita rolagem horizontal */
+html,
+body {
+    overflow-x: hidden;
+}
+
+/* Ajusta a posição do carrinho em dispositivos móveis */
+@media (max-width: 768px) {
+    .cart-menu {
+        width: 100%;
+        right: -100%;
+    }
+
+    .cart-menu.active { 	/* Adicionando a classe active que faltava */
+        right: 0;
+    }
+}

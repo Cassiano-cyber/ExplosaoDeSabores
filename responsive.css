@@ -1,0 +1,133 @@
+/* Melhorias na Responsividade */
+@media (max-width: 768px) {
+    .container {
+    padding: 0 10px;
+    }
+   
+    .carousel-slide img {
+    height: 300px;
+    }
+   
+    .carousel-button {
+    padding: 10px;
+    font-size: medium;
+    }
+   
+    .botao-whatsapp {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    }
+   
+    /* Ajustes para telas menores */
+    .container {
+    padding: 0 10px;
+    }
+   
+    .site-header .container {
+    flex-direction: column;
+    align-items: center;
+    /* Alinhar no centro */
+    }
+   
+    .site-header h1,
+    .site-header p,
+    .site-header button {
+    margin: 10px 0;
+    }
+   
+    .promotions-grid,
+    .bebidas-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    /* Ajuste no tamanho mínimo das colunas */
+    }
+   
+    .bebida-item {
+    width: 100%;
+    /* Aumente o espaçamento entre os elementos */
+    }
+   
+    .cart,
+    #carrinho {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Ajuste a transição para cada um */
+    }
+   
+    /* Ajustes no Footer para telas menores */
+    .site-footer .container {
+    flex-direction: column;
+    /* Empilha os elementos */
+    text-align: center;
+    /* Centraliza o texto */
+    }
+   
+    .site-footer p {
+    flex-basis: 100%;
+    /* Ocupa a largura total */
+    text-align: center;
+    /* Centraliza o texto */
+    padding-right: 0;
+    /* Remove padding */
+    }
+   
+    .footer-links {
+    flex-basis: 100%;
+    /* Ocupa a largura total */
+    justify-content: center;
+    /* Centraliza os links */
+    }
+   }
+   
+   /* Ajusta a posição do carrinho em dispositivos móveis - Duplicado anteriormente, manter aqui por contexto */
+   @media (max-width: 768px) {
+    .cart-menu {
+    width: 100%;
+    right: -100%;
+    }
+   
+    .cart-menu.active {
+    right: 0;
+    }
+   }
+   
+   /* Responsividade do Container de Endereço - Duplicado anteriormente, manter aqui por contexto */
+   @media (max-width: 768px) {
+    #endereco-container {
+    padding: 5px;
+    margin: 5px;
+    }
+   }
+   
+   /* Responsividade dos Inputs de Texto - Duplicado anteriormente, manter aqui por contexto */
+   @media (max-width: 768px) {
+    #endereco-container input {
+    padding: 4px;
+    margin-bottom: 5px;
+    }
+   }
+   
+   /* Ajustes para telas menores do Menu Carrinho */
+   @media (max-width: 768px) {
+    .cart-menu .cart-total-container,
+    .cart-menu .checkout-container {
+    padding: 5px;
+    }
+   
+    .cart-menu .checkout-container button {
+    padding: 10px;
+    font-size: 1rem;
+    }
+   }
+   
+   /* Ajustes para imagens decorativas em telas menores */
+   @media (max-width: 768px) {
+    .decorative-image img {
+    max-height: 150px; /* Ajusta a altura para telas menores */
+    }
+   }
+   
+   @media (max-width: 480px) {
+    .decorative-image img {
+    max-height: 100px; /* Ajusta a altura para telas muito pequenas */
+    }
+   }

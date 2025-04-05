@@ -1,0 +1,57 @@
+/* Estilos para a seção de sugestões */
+#sugestoes {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: var(--background-light);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#sugestoes h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#sugestoes-produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#sugestoes .promotion-item {
+    width: 100%;
+    max-width: 350px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#sugestoes .promotion-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#sugestoes .promotion-item p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Adaptações para o tema escuro */
+body.dark-mode #sugestoes {
+    background-color: var(--dark-background);
+}
+
+body.dark-mode #sugestoes h2,
+body.dark-mode #sugestoes .promotion-item h3,
+body.dark-mode #sugestoes .promotion-item p {
+    color: var(--light-text);
+    text-shadow: none;
+}

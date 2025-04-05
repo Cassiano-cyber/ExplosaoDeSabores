@@ -1,0 +1,254 @@
+/* Carrinho */
+.cart {
+    background-color: var(--background-color);
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+   }
+   
+   .cart h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+   }
+   
+   .cart-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+   }
+   
+   .cart-list li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+   }
+   
+   .cart-list button {
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+   }
+   
+   /* Estilos do Menu do Carrinho */
+   .cart-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%; /* Ocupa metade da tela */
+    height: 100%; /* Mantém a altura total */
+    background-color: var(--primary-color, #D9905C);
+    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transform: translateX(100%); /* Esconde fora da tela inicialmente */
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto; /* Permite rolagem se o conteúdo for maior que a altura */
+   }
+   
+   .cart-menu.open {
+    transform: translateX(0); /* Mostra o carrinho */
+   }
+   
+   .cart-menu h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+   }
+   
+   /* Estilo da Lista de Itens no Menu do Carrinho */
+   #cart-items {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+   }
+   
+   #cart-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+   }
+   
+   #cart-items li:last-child {
+    border-bottom: none;
+   }
+   
+   #cart-items li span {
+    color: var(--text-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+   }
+   
+   /* Estilo das Opções de Entrega no Menu do Carrinho */
+   .cart-options {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+   }
+   
+   .cart-options label {
+    margin-bottom: 5px;
+    color: var(--text-color);
+   }
+
+   .cart-options input::placeholder {
+    color: #aaa;
+   }
+   
+   /* Estilo do Total no Menu do Carrinho */
+   #cart-total {
+    font-weight: bold;
+    margin: 15px 0;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+   }
+   
+   /* Estilos do Total e do Botão "Finalizar Pedido" */
+   .cart-menu .cart-total-container,
+   .cart-menu .checkout-container {
+    position: sticky;
+    bottom: 0;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+   }
+   
+   .cart-menu .cart-total-container p,
+   .cart-menu .checkout-container button {
+    margin: 0;
+    text-align: center;
+   }
+   
+   /* Responsividade do Container de Endereço */
+   @media (max-width: 768px) {
+    #endereco-container {
+    padding: 5px;
+    margin: 5px;
+    }
+   }
+   
+   #endereco-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-color);
+   }
+   
+   #endereco-container input::placeholder {
+    color: #aaa;
+   }
+   
+   #endereco-container input:read-only::placeholder {
+    color: #bbb;
+   }
+
+   #endereco-container input,
+   #endereco-container-principal input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+   }
+
+   #endereco-container input:focus,
+   #endereco-container-principal input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+   }
+
+   #endereco-container label,
+   #endereco-container-principal label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    font-weight: bold;
+   }
+   
+   /* Responsividade dos Inputs de Texto */
+   @media (max-width: 768px) {
+    #endereco-container input,
+    #endereco-container-principal input {
+    padding: 8px;
+    margin-bottom: 8px;
+    }
+   }
+   
+   /* Ajusta a posição do carrinho em dispositivos móveis */
+   @media (max-width: 768px) {
+    .cart-menu {
+    width: 75%; /* Em dispositivos menores, ocupa 75% da largura */
+    right: -100%;
+    }
+   
+    .cart-menu.active {
+    right: 0;
+    }
+   }
+   
+   /* Estilos do botão "Fechar Carrinho" */
+   .close-cart-button {
+    background: var(--primary-color);
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+
+.close-cart-button:hover {
+    background-color: var(--button-hover-color);
+    color: #ecb49e; /* Tonalidade de salmão claro */
+    transform: scale(1.1);
+}
+
+.close-cart-button i {
+    font-size: 1.2em;
+}
+
+.cart-menu .close-cart-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--header-text-color, #fff);
+    cursor: pointer;
+}
+
+.cart-total-container {
+    position: sticky;
+    bottom: 0;
+    background-color: var(--primary-color, #D9905C);
+    padding: 10px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .cart-menu {
+        width: 75%; /* Em dispositivos menores, ocupa 75% da largura */
+    }
+}

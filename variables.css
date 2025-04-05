@@ -1,0 +1,35 @@
+/* Variáveis de Cores */
+:root {
+    /* Cores da Marca */
+    --primary-color: #d10000;
+    --secondary-color: #ffd700;
+    --highlight-color: #ffd700;
+   
+    /* Cores para CTAs (Laranja Forte com Texto Branco) */
+    --button-cta: #f07400;
+    /* Cor do botão de chamada para ação (Laranja Forte) */
+    --button-cta-hover: #d96500;
+    /* Cor do botão de chamada para ação ao passar o mouse (Laranja Escuro) */
+   
+    /* Cores de Texto */
+    --dark-background: #800000;
+    --dark-mode-text: #fff;
+    --text-color: #555;
+    --light-text: #fff;
+    --light-blue: #BCF8EC;
+    /* Cores de Botões */
+    --button-color: #f56a34;
+    --button-hover-color: #ff6347;
+    --button-dark: #f53c2f;
+   
+    /* Cores de Fundo */
+    --background-color: #fed2a3;
+    --cart-background: #f9f9f9;
+    --background-light: #e2b08c;
+    --footer-background: #b93026;
+    --dark-blue: #0c133b;
+
+    /* Fontes */
+    --dramaturgia: 'Dramaturgia', cursive;
+    --dancing: 'Dancing Script', cursive;
+   }

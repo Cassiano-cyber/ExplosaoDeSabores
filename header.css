@@ -1,0 +1,387 @@
+/* Estilos Gerais do Cabeçalho */
+.site-header {
+    /* Removemos padding daqui se a nav-wrapper for sticky */
+    position: relative; /* Necessário para o z-index do hero-overlay funcionar bem */
+}
+
+.header-nav-wrapper {
+    background-color: var(--primary-color, #D9905C); /* Cor de fundo padrão */
+    color: var(--header-text-color, var(--white-color, #fff)); /* Cor de texto padrão */
+    padding: 15px 0; /* Espaçamento interno */
+    width: 100%;
+    position: sticky; /* Fixa no topo */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Garante que fique acima de outros conteúdos */
+    box-shadow: var(--box-shadow, 0 2px 5px rgba(0,0,0,0.2)); /* Sombra padrão */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-between; /* Alinha horizontalmente */
+}
+
+.header-flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Barra Superior: Logo, Nav Principal, Tema */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Garante que ocupe toda a largura */
+    gap: 15px; /* Espaço entre os itens */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    flex-shrink: 0; /* Não deixa a logo encolher */
+}
+
+.logo {
+    height: 45px; /* Ajuste conforme necessário */
+    display: block; /* Remove espaço extra abaixo da imagem */
+    margin-right: 10px; /* Espaço entre a logo e o título */
+    transition: height 0.3s ease; /* Transição suave para redimensionamento */
+}
+
+/* Navegação Principal */
+.main-nav {
+    display: flex;
+    justify-content: flex-end; /* Alinha os links à direita */
+    align-items: center; /* Centraliza os links verticalmente */
+    flex-grow: 1; /* Ocupa o espaço restante */
+    position: relative; /* Necessário para o menu mobile absoluto */
+}
+
+.nav-links { /* Estilo base para ambas as listas */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav-links {
+    display: flex;
+    gap: 15px; /* Espaço entre os links principais */
+    align-items: center; /* Centraliza verticalmente os links */
+    height: 100%; /* Garante alinhamento vertical */
+}
+
+.main-nav-links li a {
+    text-decoration: none;
+    color: var(--header-text-color, var(--white-color, #fff));
+    background-color: rgba(0, 0, 0, 0.1); /* Fundo mais profissional */
+    padding: 8px 12px;
+    font-weight: 500;
+    font-size: 1rem; /* Tamanho base */
+    border-radius: 4px; /* Suave */
+    transition: background-color 0.2s ease, color 0.2s ease;
+    display: flex;
+    align-items: center; /* Centraliza o texto verticalmente */
+    height: 100%; /* Garante alinhamento vertical */
+}
+
+.main-nav-links li a:hover,
+.main-nav-links li a:focus { /* :focus para acessibilidade */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo mais claro no hover */
+    color: var(--highlight-color, #F2C894); /* Cor de destaque */
+}
+
+/* Navegação do Tema */
+.theme-nav {
+    flex-shrink: 0; /* Não deixa o botão encolher */
+}
+
+#toggleTheme {
+    background: none;
+    border: 1px solid var(--header-text-color, var(--white-color, #fff));
+    color: var(--header-text-color, var(--white-color, #fff));
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem; /* Um pouco menor */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+#toggleTheme:hover,
+#toggleTheme:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    opacity: 0.9;
+}
+
+#toggleTheme .fa-sun { /* Ícone do sol inicialmente escondido */
+    display: none;
+}
+/* No tema escuro, mostramos o sol e escondemos a lua */
+.theme-dark #toggleTheme .fa-sun {
+    display: inline-block;
+}
+.theme-dark #toggleTheme .fa-moon {
+    display: none;
+}
+
+.theme-toggle-text {
+    display: block; /* Exibe o texto por padrão */
+}
+
+@media (max-width: 768px) {
+    .theme-toggle-text {
+        display: none; /* Esconde o texto em telas menores */
+    }
+}
+
+/* Navegação Secundária (Ícones) */
+.secondary-nav {
+    background-color: rgba(0, 0, 0, 0.1); /* Um fundo sutil para diferenciar */
+    padding: 8px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Linha separadora opcional */
+}
+
+.secondary-nav-links {
+    justify-content: center; /* Centraliza os itens */
+    gap: 20px; /* Espaço entre os botões de ícone */
+    flex-wrap: wrap; /* Permite quebrar linha */
+}
+
+.secondary-nav-links li a {
+    text-decoration: none;
+    color: var(--secondary-nav-text-color, var(--white-color, #f0f0f0)); /* Cor um pouco diferente talvez */
+    font-size: 0.95rem;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.secondary-nav-links li a:hover,
+.secondary-nav-links li a:focus {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--white-color, #fff); /* Cor mais brilhante no hover */
+}
+
+.nav-icon { /* Estilo para os ícones na nav secundária */
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1); /* Para ícones pretos ficarem brancos - ajuste se usar ícones coloridos */
+}
+
+
+/* Seção Hero */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Ou use vh: height: 70vh; */
+    overflow: hidden;
+    background-color: #333; /* Fallback caso vídeo não carregue */
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white-color, white);
+    text-align: center;
+    z-index: 3;
+    width: 90%;
+}
+
+.hero-content h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero-content p {
+    font-family: 'Playwrite CU', cursive;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* --- Responsividade do Header --- */
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--header-text-color, var(--white-color, #fff));
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: auto; /* Garante que o botão fique à direita */
+}
+
+@media (max-width: 992px) {
+    .main-nav-links { gap: 10px; }
+    .main-nav-links li a { font-size: 0.95rem; padding: 6px 8px; }
+    .secondary-nav-links { gap: 15px; }
+    .secondary-nav-links li a { font-size: 0.9rem; padding: 4px 8px; }
+    #toggleTheme .theme-toggle-text { display: none; }
+    #toggleTheme { padding: 5px 8px; }
+    .logo {
+        height: 35px; /* Reduz o tamanho da logo em telas menores */
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar { 
+        flex-wrap: nowrap; /* Permite quebra de linha */
+        justify-content: space-between;
+        align-items: center;
+    }
+    .main-nav { 
+        order: 3; /* Move o menu para baixo */
+        width: 100%; /* Ocupa toda a largura */
+        justify-content: flex-start;
+    }
+    .main-nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color, #D9905C);
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 999; /* Garante que fique sobre a nav secundária */
+    }
+    .main-nav.active .main-nav-links { display: flex; }
+    .main-nav-links li { width: 100%; text-align: center; }
+    .main-nav-links li a { display: block; padding: 12px 15px; width: 100%; border-radius: 0; }
+    .main-nav-links li a:hover, .main-nav-links li a:focus { background-color: rgba(255, 255, 255, 0.15); }
+    .mobile-menu-toggle { display: block; margin-left: auto; margin-right: 0; }
+    .secondary-nav { padding: 8px 15px; }
+    .secondary-nav-links { justify-content: space-around; gap: 10px; }
+    /* .secondary-nav-links li a span { display: none; } */
+    /* .secondary-nav-links li a .nav-icon { margin: 0 auto; } */
+    .hero-section { height: 400px; }
+    .logo {
+        height: 30px; /* Reduz ainda mais a logo em telas muito pequenas */
+    }
+}
+
+.header-title h1 {
+    font-size: 1.5rem; /* Tamanho do título */
+    text-align: left;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* Botão de alternar tema flutuante */
+.theme-toggle-floating {
+    position: fixed;
+    top: 20px; /* Canto superior esquerdo */
+    left: 20px;
+    z-index: 1000;
+}
+
+.theme-toggle-floating button {
+    background: var(--primary-color, #D9905C);
+    border: none;
+    color: var(--white-color, #fff);
+    padding: 10px 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.theme-toggle-floating button:hover {
+    background-color: var(--highlight-color, #F2C894);
+    transform: scale(1.1);
+}
+
+/* Botão do menu hambúrguer */
+.mobile-menu-toggle {
+    display: none; /* Esconde em desktops */
+    background: none;
+    border: none;
+    color: var(--header-text-color, var(--white-color, #fff));
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: auto; /* Garante que o botão fique à direita */
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block; /* Mostra o botão hambúrguer em dispositivos móveis */
+        margin-right: 10px; /* Garante que o botão fique à direita */
+    }
+
+    .main-nav-links {
+        display: none; /* Esconde os links de navegação em dispositivos móveis */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color, #D9905C);
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    .main-nav.active .main-nav-links {
+        display: flex; /* Mostra os links quando o menu hambúrguer é aberto */
+    }
+
+    .main-nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-nav-links li a {
+        display: block;
+        padding: 12px 15px;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .main-nav-links li a:hover,
+    .main-nav-links li a:focus {
+        background-color: rgba(255, 255, 255, 0.15);
+    }
+}

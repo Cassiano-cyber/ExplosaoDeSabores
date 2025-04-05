@@ -1,0 +1,110 @@
+body.dark-mode {
+    background-color: var(--dark-background);
+    color: var(--dark-mode-text);
+   }
+   
+   body.dark-mode button,
+   body.dark-mode .button {
+    background-color: var(--button-dark);
+    color: var(--dark-mode-text);
+   }
+   
+   body.dark-mode #menu h2 {
+    color: var(--light-text);
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+   }
+   
+   body.dark-mode .promotions h2 {
+    color: var(--light-text);
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+   }
+   
+   .dark-mode .promotions {
+    background-color: var(--dark-background);
+   }
+   
+   .dark-mode .carousel-slide h3,
+   .dark-mode .carousel-slide p {
+    color: var(--dark-mode-text);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+   }
+   
+   .dark-mode .cart {
+    background-color: var(--dark-background);
+    color: var(--light-text);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+   }
+   
+   .dark-mode .cart h2 {
+    color: var(--light-text);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+   }
+   
+   .dark-mode .cart-list li {
+    color: var(--light-text);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+   }
+   
+   .dark-mode .cart-list button {
+    color: var(--light-text);
+   }
+   
+   .dark-mode #total {
+    color: var(--light-text);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+   }
+   
+   .dark-mode .bebidas {
+    background: var(--dark-background);
+   }
+   
+   .dark-mode .bebidas h2,
+   .dark-mode .bebidas p {
+    color: var(--light-text);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+   }
+   
+   .dark-mode .bebida-item {
+    background: #600000;
+   }
+   
+   .dark-mode .cart-menu {
+    background: var(--dark-background);
+   }
+   
+   .dark-mode .cart-menu h2 {
+    color: var(--light-text);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+   }
+   
+   .dark-mode #cart-items li {
+    border-bottom: 1px solid #555;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+   }
+   
+   .dark-mode #cart-items li span {
+    color: var(--dark-mode-text);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+   }
+   
+   .dark-mode .cart-options label {
+    color: var(--dark-mode-text);
+   }
+   
+   .dark-mode .cart-options input {
+    background-color: var(--dark-background);
+    color: var(--dark-mode-text);
+    border: 1px solid #555;
+   }
+   
+   .dark-mode #cart-total {
+    color: var(--dark-mode-text);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+   }
+   
+   .dark-mode .site-footer p {
+    color: var(--dark-mode-text);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+   }

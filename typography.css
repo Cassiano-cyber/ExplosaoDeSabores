@@ -1,0 +1,107 @@
+/* Estilos de Título */
+h1,
+h2,
+h3 {
+ font-family: 'Dancing Script', cursive;
+ font-weight: normal;
+}
+
+h1 {
+ margin-bottom: 20px;
+ color: var(--light-text);
+ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+ /* -webkit-text-stroke: 1px var(--secondary-color); /* Adiciona contorno ao texto */
+ animation: fadeInDown 1s ease-out;
+}
+
+h2,
+h3 {
+ margin-bottom: 15px;
+ color: var(--primary-color);
+ text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+ /* -webkit-text-stroke: 0.5px var(--secondary-color); /* Adiciona contorno ao texto */
+ text-align: center;
+}
+
+/* Estilos para o modo escuro, para o carrossel */
+body.dark-mode #menu h2 {
+ color: var(--light-text);
+ /* Cor do título no modo escuro */
+ font-weight: bold;
+ text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para o modo escuro, para as promoções */
+body.dark-mode .promotions h2 {
+ color: var(--light-text);
+ /* Cor do título no modo escuro */
+ font-weight: bold;
+ text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para o modo escuro, para a seção de bebidas */
+.dark-mode .bebidas h2,
+.dark-mode .bebidas p {
+ color: var(--light-text);
+ text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo do Total no Carrinho no modo escuro */
+.dark-mode #total {
+ color: var(--light-text);
+ text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos do Carrinho (Modo Escuro) */
+.dark-mode .cart {
+ background-color: var(--dark-background);
+ color: var(--light-text);
+ text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .cart h2 {
+ color: var(--light-text);
+ text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .cart-list li {
+ color: var(--light-text);
+ text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .cart-list button {
+ color: var(--light-text);
+}
+
+/* Estilos do Menu do Carrinho */
+.dark-mode .cart-menu h2 {
+ color: var(--light-text);
+ text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode #cart-items li span {
+ color: var(--dark-mode-text);
+ text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo das Opções de Entrega no Menu do Carrinho */
+.dark-mode .cart-options label {
+ color: var(--dark-mode-text);
+}
+
+.dark-mode .cart-options input:read-only {
+ background-color: var(--dark-background);
+ color: var(--dark-mode-text);
+ border: 1px solid #555;
+}
+
+/* Estilo do Total no Menu do Carrinho */
+.dark-mode #cart-total {
+ color: var(--dark-mode-text);
+ text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .site-footer p {
+ color: var(--dark-mode-text);
+ text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}

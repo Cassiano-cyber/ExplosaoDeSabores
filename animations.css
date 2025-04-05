@@ -1,0 +1,35 @@
+/* Animações */
+
+@keyframes fadeInDown {
+    from {
+    opacity: 0;
+    transform: translateY(-20px);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+   }
+   
+   /* Animação para itens de promoção (salgados) */
+   .promotion-item,
+   .salgado-item {
+    animation: fadeInUp 0.8s ease-out;
+   }
+   
+   @keyframes fadeInUp {
+    from {
+    opacity: 0;
+    transform: translateY(20px);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+   }
+   
+   /* Animação para botões de promoção - Já definida em buttons.css */
+   
+   /* Efeito de pulso no ícone do carrinho - Já definida em buttons.css */
+   
+   /* Efeito de brilho no título das promoções - Já definida em typography.css */

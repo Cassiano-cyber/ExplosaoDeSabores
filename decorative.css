@@ -1,0 +1,29 @@
+/* Estilos adicionais (Genéricos que não se encaixaram perfeitamente) */
+.bebidas-grid,
+.promotions-grid {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+}
+
+/* PROMOTION ITEMS - Já definidos em promotions.css */
+
+/* GRIDS - Já definidos em promotions.css e drinks.css */
+
+* Linha Decorativa SVG */
+.decorative-line {
+    display: block; /* Garante que o SVG ocupe a largura */
+    margin: 20px 0 40px 0; /* Espaçamento acima e abaixo */
+    stroke: var(--decorative-line-color, #D4A373); /* Cor da linha principal */
+}
+
+.decorative-line path {
+    stroke-width: 4;
+    fill: none;
+}
+
+.decorative-line circle {
+    fill: var(--decorative-circle-fill, #E5C07B);
+    stroke: var(--decorative-circle-stroke, #B88A44);
+    stroke-width: 3;
+}

@@ -1,0 +1,137 @@
+/* Importação da Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+/* Reset de Estilos */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ max-width: 100%;
+}
+
+/* Estilos Base */
+body {
+ font-family: 'Dancing Script', cursive;
+ background-color: var(--background-color);
+ color: var(--text-color);
+ transition: background-color 0.3s ease, color 0.3s ease;
+ overflow-x: hidden;
+ line-height: 1.5;
+}
+
+body.dark-mode {
+ background-color: var(--dark-background);
+ color: var(--dark-mode-text);
+}
+
+/* Estilos de Contêiner */
+.container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 20px;
+}
+
+/* Estilos de Link */
+a {
+ text-decoration: none;
+ color: inherit;
+ transition: color 0.3s ease;
+}
+
+a:hover {
+ color: var(--highlight-color);
+}
+
+/* IMAGENS RESPONSIVAS */
+img {
+ max-width: 100%;
+ height: auto;
+ display: block;
+ /* Evita espaços extras abaixo da imagem */
+}
+
+/* Evita rolagem horizontal */
+html,
+body {
+ overflow-x: hidden;
+}
+
+/* Estilos do botão "Fechar Carrinho" (com a seta) */
+.close-cart-button {
+ background: none;
+ border: none;
+ font-size: 1.5em;
+ cursor: pointer;
+ color: #777;
+ position: absolute;
+ top: 10px;
+ left: 10px;
+ padding: 0;
+ width: auto;
+ height: auto;
+ line-height: 1;
+ transition: color 0.3s ease;
+}
+
+.close-cart-button:hover {
+ color: var(--text-color);
+}
+
+.close-cart-button i {
+ font-size: 1.5em;
+}
+
+.visually-hidden {
+ position: absolute !important;
+ width: 1px !important;
+ height: 1px !important;
+ padding: 0 !important;
+ margin: -1px !important;
+ overflow: hidden !important;
+ clip: rect(0, 0, 0, 0) !important;
+ white-space: nowrap !important;
+ border: 0 !important;
+}
+
+/* Estilos para o carrossel de comentários */
+.comentarios-container {
+    position: relative;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+    height: 150px; /* Altura fixa para o container */
+    overflow: hidden; /* Esconde os comentários que estão fora da área visível */
+}
+
+.comentario {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(231, 219, 219, 0.179);
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.comentario:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.comentario:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.comentario:nth-child(3) {
+    animation-delay: 10s;
+}
+
+.comentario p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.comentario p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}

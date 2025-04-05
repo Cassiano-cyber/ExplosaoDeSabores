@@ -1,0 +1,119 @@
+/* Promoções */
+.promotions {
+    background-color: var(--background-color);
+    padding: 40px 20px;
+    text-align: center;
+   }
+   
+   .promotions h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+   }
+   
+   .promotions-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+   }
+   
+   .promotion-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 10px;
+    animation: fadeInUp 0.8s ease-out;
+   }
+   
+   .promotion-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+   }
+   
+   .promotion-item h3 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+   }
+   
+   .promotion-item p {
+    font-size: 1.2rem;
+    color: var(--highlight-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+   }
+   
+   .promotion-price {
+    font-size: 1.2rem;
+    color: var(--highlight-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+   }
+   
+   .promotion-price .old-price {
+    color: var(--secondary-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+   }
+   
+   .promotion-price .new-price {
+    font-weight: bold;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+   }
+   
+   .tachado {
+    text-decoration: line-through;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+   }
+   
+   /* GRIDS */
+   .promotions-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   }
+   
+   /* PROMOTION ITEMS */
+   .promotion-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    /* Limita a largura dos itens */
+    margin: 0 10px;
+    /* Adiciona margem horizontal */
+   }
+   
+   /* Efeito de zoom nas imagens dos salgados */
+   .promotion-item img:hover,
+   .salgado-item img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+   }
+   
+   /* Efeito de brilho no título das promoções */
+   #promocoes h2 {
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ff6600;
+    animation: glow 1.5s infinite alternate;
+   }
+   
+   @keyframes glow {
+    from {
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ff6600;
+    }
+    to {
+    text-shadow: 0 0 20px #ff6600, 0 0 30px #ffcc00, 0 0 40px #ff3300;
+    }
+   }

@@ -1,0 +1,40 @@
+/* social.css */
+/* Ícone do Instagram */
+i.fab.fa-instagram {
+    font-size: 24px;
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+i.fab.fa-instagram:hover {
+    color: var(--button-hover-color);
+}
+
+/* Botão do WhatsApp */
+.botao-whatsapp {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 25px;
+    background-color: #25D366;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    z-index: 1000;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.botao-whatsapp:hover {
+    background-color: #128C7E;
+}
+
+.fa-whatsapp {
+    margin-top: 3px;
+}

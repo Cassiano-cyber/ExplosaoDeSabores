@@ -1,0 +1,165 @@
+/* Estilos de Botão */
+button,
+.button {
+ background-color: var(--button-color);
+ color: var(--light-text);
+ padding: 10px 20px;
+ border: none;
+ cursor: pointer;
+ border-radius: 6px;
+ font-size: 1rem;
+ transition: background-color 0.3s ease, transform 0.2s ease;
+ font-family: Dancing Script;
+}
+
+button:hover,
+.button:hover {
+ background-color: var(--button-hover-color);
+ transform: scale(1.05);
+}
+
+button:focus,
+.button:focus {
+ outline: 2px solid var(--highlight-color);
+}
+
+/* Estilos de Botão no Modo Escuro (Sobrescreve apenas as cores) */
+body.dark-mode button,
+body.dark-mode .button {
+ background-color: var(--button-dark);
+ color: var(--dark-mode-text);
+}
+
+/* Estilo dos botões "Adicionar" - Adicionado ícone do carrinho e cor do texto branco */
+.promotion-item button,
+.carousel-slide button,
+.bebida-item button {
+ display: inline-flex;
+ /* Alinha o texto e o ícone horizontalmente */
+ align-items: center;
+ /* Alinha verticalmente no centro */
+ justify-content: center;
+ /* Espaça o texto e o ícone */
+ gap: 0.5em;
+ /* Espaçamento entre texto e ícone */
+ margin: 10px auto;
+ background-color: var(--button-color);
+ color: var(--light-text);
+ /* Cor do texto branca */
+ padding: 10px 20px;
+ border-radius: 5px;
+ transition: background-color 0.3s ease, transform 0.2s ease;
+ font-size: 1rem;
+ cursor: pointer;
+ border: none;
+}
+
+/* Estilo específico para botões de CTA (Ícone do carrinho) */
+.promotion-item button::before,
+.carousel-slide button::before,
+.bebida-item button::before {
+ content: "\f07a";
+ font-family: "Font Awesome 6 Free";
+ font-weight: 900;
+}
+
+/* Estilo do botão "Finalizar Pedido" */
+#checkoutButton {
+ background-color: var(--primary-color);
+ color: white;
+ padding: 10px 20px;
+ border: none;
+ font-size: 1.2rem;
+ width: 100%;
+ border-radius: 5px;
+}
+
+#checkoutButton:hover {
+ background-color: var(--button-hover-color);
+}
+
+/* Estilos do carrinho de compras (Cart Icon) */
+.cart-icon {
+ position: fixed;
+ top: 20px;
+ right: 20px;
+ background: var(--primary-color);
+ color: white;
+ padding: 10px 15px;
+ border-radius: 50px;
+ cursor: pointer;
+ font-size: 1.2rem;
+ z-index: 100;
+ transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cart-icon:hover {
+ background-color: var(--button-hover-color);
+ transform: scale(1.1);
+}
+
+/* Estilo da Lista de Itens no Menu do Carrinho */
+#cart-items li button {
+ background: none;
+ border: none;
+ color: #ff4d4d;
+ cursor: pointer;
+ font-size: 1.2rem;
+ padding: 0;
+}
+
+#cart-items li button:hover {
+ opacity: 0.7;
+}
+
+/* Estilos do Total e do Botão "Finalizar Pedido" no Menu Carrinho */
+.cart-menu .checkout-container button {
+ width: 100%;
+ padding: 15px;
+ font-size: 1.2rem;
+ background-color: var(--primary-color);
+ color: white;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+ transition: background-color 0.3s ease;
+}
+
+.cart-menu .checkout-container button:hover {
+ background-color: var(--button-hover-color);
+}
+
+/* Animação para botões de promoção */
+.promotion-item button:hover,
+.salgado-item button:hover {
+ animation: pop 0.3s ease-out;
+}
+
+@keyframes pop {
+ 0% {
+ transform: scale(1);
+ }
+ 50% {
+ transform: scale(1.1);
+ }
+ 100% {
+ transform: scale(1);
+ }
+}
+
+/* Efeito de pulso no ícone do carrinho */
+.cart-icon:hover {
+ animation: pulse 0.6s infinite;
+}
+
+@keyframes pulse {
+ 0% {
+ transform: scale(1);
+ }
+ 50% {
+ transform: scale(1.05);
+ }
+ 100% {
+ transform: scale(1);
+ }
+}

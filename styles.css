@@ -1,0 +1,1231 @@
+/* Importação da Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+/* Variáveis de Cores */
+:root {
+    /* Cores da Marca */
+    --primary-color: #d10000;
+    --secondary-color: #ffd700;
+    --highlight-color: #ffd700;
+
+    /* Cores para CTAs (Laranja Forte com Texto Branco) */
+    --button-cta: #f07400;
+    /* Cor do botão de chamada para ação (Laranja Forte) */
+    --button-cta-hover: #d96500;
+    /* Cor do botão de chamada para ação ao passar o mouse (Laranja Escuro) */
+
+    /* Cores de Texto */
+    --dark-background: #800000;
+    --dark-mode-text: #fff;
+    --text-color: #555;
+    --light-text: #fff;
+    --light-blue: #BCF8EC;
+    /* Cores de Botões */
+    --button-color: #f56a34;
+    --button-hover-color: #ff6347;
+    --button-dark: #f53c2f;
+
+    /* Cores de Fundo */
+    --background-color: #fed2a3;
+    --cart-background: #f9f9f9;
+    --background-light: #e2b08c;
+    --footer-background: #b93026;
+    --dark-blue: #0c133b;
+}
+
+/* Reset de Estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+/* Estilos Base */
+body {
+    font-family: 'Dancing Script', cursive;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+
+body.dark-mode {
+    background-color: var(--dark-background);
+    color: var(--dark-mode-text);
+}
+
+/* Estilos de Contêiner */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilos de Título */
+h1,
+h2,
+h3 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: normal;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: var(--light-text);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* -webkit-text-stroke: 1px var(--secondary-color); /* Adiciona contorno ao texto */
+}
+
+h2,
+h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    /* -webkit-text-stroke: 0.5px var(--secondary-color); /* Adiciona contorno ao texto */
+}
+
+/* Estilos de Link */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--highlight-color);
+}
+
+/* Estilos de Botão */
+button,
+.button {
+    background-color: var(--button-color);
+    color: var(--light-text);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: Dancing Script;
+}
+
+button:hover,
+.button:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05);
+}
+
+button:focus,
+.button:focus {
+    outline: 2px solid var(--highlight-color);
+}
+
+/* Estilos de Botão no Modo Escuro (Sobrescreve apenas as cores) */
+body.dark-mode button,
+body.dark-mode .button {
+    background-color: var(--button-dark);
+    color: var(--dark-mode-text);
+}
+
+/* Estilos do Cabeçalho */
+.site-header {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 40px 20px;
+    position: relative;
+    width: 100%;
+}
+
+.site-header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.site-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 10px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.site-header h1 .highlight {
+    color: var(--secondary-color);
+}
+
+.site-header p {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 800px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Botão Alternar Tema */
+#toggleTheme {
+    position: absolute;
+    top: 2px;
+    left: 20px;
+    background: none;
+    border: 2px solid var(--light-text);
+    color: var(--light-text);
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+    font-family: Dancing Script;
+    z-index: 2; /* Garante que o botão fique na frente do vídeo */
+}
+
+#toggleTheme:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+/* Estilos do Vídeo de Fundo no Header */
+.hero-header video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1; /* Garante que o vídeo fique atrás do conteúdo */
+    opacity: 0.7; /* Ajuste a opacidade para melhor legibilidade do texto */
+}
+
+/* Estilos do Menu e Carrossel */
+#menu {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#menu h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para o modo escuro, para o carrossel */
+body.dark-mode #menu h2 {
+    color: var(--light-text);
+    /* Cor do título no modo escuro */
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    width: 100%;
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.carousel-slide h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-slide p {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .carousel-slide h3,
+.dark-mode .carousel-slide p {
+    color: var(--dark-mode-text);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos dos Botões do Carrossel */
+.carousel-buttons {
+    position: absolute;
+    top: 43%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 2rem;
+}
+
+.carousel-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 13px;
+    font-size: large;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font: 1.2em sans-serif;
+}
+
+.carousel-button:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.1);
+}
+
+/* Promoções */
+.promotions {
+    background-color: var(--background-color);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+body.dark-mode .promotions {
+    background-color: var(--dark-background);
+}
+
+.promotions h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para o modo escuro, para as promoções */
+body.dark-mode .promotions h2 {
+    color: var(--light-text);
+    /* Cor do título no modo escuro */
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.promotions-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.promotion-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 10px;
+}
+
+.promotion-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.promotion-item h3 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.promotion-item p {
+    font-size: 1.2rem;
+    color: var(--highlight-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.promotion-price {
+    font-size: 1.2rem;
+    color: var(--highlight-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.promotion-price .old-price {
+    color: var(--secondary-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.promotion-price .new-price {
+    font-weight: bold;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.tachado {
+    text-decoration: line-through;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo dos botões "Adicionar" - Adicionado ícone do carrinho e cor do texto branco */
+.promotion-item button,
+.carousel-slide button,
+.bebida-item button {
+    display: inline-flex;
+    /* Alinha o texto e o ícone horizontalmente */
+    align-items: center;
+    /* Alinha verticalmente no centro */
+    justify-content: center;
+    /* Espaça o texto e o ícone */
+    gap: 0.5em;
+    /* Espaçamento entre texto e ícone */
+    margin: 10px auto;
+    background-color: var(--button-color);
+    color: var(--light-text);
+    /* Cor do texto branca */
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+}
+
+/* Estilo específico para botões de CTA (Ícone do carrinho) */
+.promotion-item button::before,
+.carousel-slide button::before,
+.bebida-item button::before {
+    content: "\f07a";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+/* Carrinho */
+.cart {
+    background-color: var(--background-color);
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.cart h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.cart-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.cart-list li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.cart-list button {
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* Estilos do Carrinho (Modo Escuro) */
+.dark-mode .cart {
+    background-color: var(--dark-background);
+    color: var(--light-text);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .cart h2 {
+    color: var(--light-text);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .cart-list li {
+    color: var(--light-text);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .cart-list button {
+    color: var(--light-text);
+}
+
+/* Estilo do Total no Carrinho no modo escuro */
+.dark-mode #total {
+    color: var(--light-text);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Seção Bebidas */
+.bebidas {
+    text-align: center;
+    padding: 30px 20px;
+    background: var(--background-color);
+}
+
+.dark-mode .bebidas {
+    background: var(--dark-background);
+}
+
+.bebidas h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.bebidas p {
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .bebidas h2,
+.dark-mode .bebidas p {
+    color: var(--light-text);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.bebidas-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.bebida-item {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dark-mode .bebida-item {
+    background: #600000;
+}
+
+.bebida-item img {
+    width: 100%;
+    border-radius: 10px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.bebida-item h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: var(--button-hover-color);
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.bebida-item p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--button-hover-color);
+    margin: 10px 0;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.bebida-item button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: background 0.3s;
+    align-self: center;
+}
+
+.bebida-item button:hover {
+    background: #a71d1d;
+}
+
+/* Estilo do botão "Finalizar Pedido" */
+#checkoutButton {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.2rem;
+    width: 100%;
+    border-radius: 5px;
+}
+
+#checkoutButton:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* Ícone do Instagram */
+i.fab.fa-instagram {
+    font-size: 24px;
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+i.fab.fa-instagram:hover {
+    color: var(--button-hover-color);
+}
+
+/* Botão do WhatsApp */
+.botao-whatsapp {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 25px;
+    background-color: #25D366;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    z-index: 1000;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.botao-whatsapp:hover {
+    background-color: #128C7E;
+}
+
+.fa-whatsapp {
+    margin-top: 3px;
+}
+
+/* Estilos do Carrinho de Compras (Cart Icon) */
+.cart-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    z-index: 100;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cart-icon:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.1);
+}
+
+/* Estilos do Menu do Carrinho */
+.cart-menu {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 300px;
+    height: 100vh;
+    background: white;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
+    z-index: 101;
+}
+
+.dark-mode .cart-menu {
+    background: var(--dark-background);
+}
+
+.cart-menu.active {
+    right: 0;
+}
+
+.cart-menu h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .cart-menu h2 {
+    color: var(--light-text);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo da Lista de Itens no Menu do Carrinho */
+#cart-items {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode #cart-items li {
+    border-bottom: 1px solid #555;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#cart-items li:last-child {
+    border-bottom: none;
+}
+
+#cart-items li span {
+    color: var(--text-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode #cart-items li span {
+    color: var(--dark-mode-text);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#cart-items li button {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0;
+}
+
+#cart-items li button:hover {
+    opacity: 0.7;
+}
+
+/* Estilo das Opções de Entrega no Menu do Carrinho */
+.cart-options {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.cart-options label {
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.dark-mode .cart-options label {
+    color: var(--dark-mode-text);
+}
+
+.cart-options input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.dark-mode .cart-options input[type="text"] {
+    background-color: var(--dark-background);
+    color: var(--dark-mode-text);
+    border: 1px solid #555;
+}
+
+/* Estilo do Total no Menu do Carrinho */
+#cart-total {
+    font-weight: bold;
+    margin: 15px 0;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode #cart-total {
+    color: var(--dark-mode-text);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos do Rodapé */
+.site-footer {
+    background-color: var(--footer-background);
+    padding: 20px 0;
+    text-align: center;
+    overflow: hidden;
+    /* Garante que nada ultrapasse as bordas */
+}
+
+.site-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* Permite que os elementos quebrem para a próxima linha */
+    padding: 10px;
+    /* Adicionado para garantir espaço interno */
+}
+
+.site-footer p {
+    color: var(--light-text);
+    margin: 0;
+    flex-basis: 50%;
+    /* Ajuste a porcentagem conforme necessário */
+    flex-shrink: 1;
+    /* Permite que o texto encolha se necessário */
+    padding-right: 10px;
+    /* Adiciona espaço entre o texto e os links */
+    text-align: left;
+    /* Alinha o texto à esquerda */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .site-footer p {
+    color: var(--dark-mode-text);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    /* Alinha os links à direita */
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    flex-basis: 50%;
+    /* Ajuste a porcentagem conforme necessário */
+    flex-shrink: 1;
+    /* Permite que os links encolham se necessário */
+    flex-wrap: wrap;
+    /* Permite que os itens de link quebrem para a próxima linha */
+}
+
+.footer-links li {
+    margin: 0;
+    /* Remove margens dos itens da lista */
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: var(--light-text);
+    font-size: 1.2rem;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    /* Impede quebras de linha dentro dos links */
+}
+
+.footer-links li a:hover {
+    color: var(--button-hover-color);
+}
+
+/* Melhorias na Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .carousel-slide img {
+        height: 300px;
+    }
+
+    .carousel-button {
+        padding: 10px;
+        font-size: medium;
+    }
+
+    .botao-whatsapp {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    /* Ajustes para telas menores */
+    .container {
+        padding: 0 10px;
+    }
+
+    .site-header .container {
+        flex-direction: column;
+        align-items: center;
+        /* Alinhar no centro */
+    }
+
+    .site-header h1,
+    .site-header p,
+    .site-header button {
+        margin: 10px 0;
+    }
+
+    .promotions-grid,
+    .bebidas-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        /* Ajuste no tamanho mínimo das colunas */
+    }
+
+    .bebida-item {
+        width: 100%;
+        /* Aumente o espaçamento entre os elementos */
+    }
+
+    .cart,
+    #carrinho {
+        transition: background-color 0.3s ease, color 0.3s ease;
+        /* Ajuste a transição para cada um */
+    }
+
+    /* Ajustes no Footer para telas menores */
+    .site-footer .container {
+        flex-direction: column;
+        /* Empilha os elementos */
+        text-align: center;
+        /* Centraliza o texto */
+    }
+
+    .site-footer p {
+        flex-basis: 100%;
+        /* Ocupa a largura total */
+        text-align: center;
+        /* Centraliza o texto */
+        padding-right: 0;
+        /* Remove padding */
+    }
+
+    .footer-links {
+        flex-basis: 100%;
+        /* Ocupa a largura total */
+        justify-content: center;
+        /* Centraliza os links */
+    }
+}
+
+/* Estilos adicionais */
+.bebidas-grid,
+.promotions-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* IMAGENS RESPONSIVAS */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    /* Evita espaços extras abaixo da imagem */
+}
+
+/* PROMOTION ITEMS */
+.promotion-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    /* Limita a largura dos itens */
+    margin: 0 10px;
+    /* Adiciona margem horizontal */
+}
+
+/* GRIDS */
+.bebidas-grid,
+.promotions-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Evita rolagem horizontal */
+html,
+body {
+    overflow-x: hidden;
+}
+
+/* Ajusta a posição do carrinho em dispositivos móveis */
+@media (max-width: 768px) {
+    .cart-menu {
+        width: 100%;
+        right: -100%;
+    }
+
+    .cart-menu.active { 	/* Adicionando a classe active que faltava */
+        right: 0;
+    }
+}
+
+/* Estilos do botão "Fechar Carrinho" (com a seta) */
+.close-cart-button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #777;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 0;
+    width: auto;
+    height: auto;
+    line-height: 1;
+    transition: color 0.3s ease;
+}
+
+.close-cart-button:hover {
+    color: var(--text-color);
+}
+
+.close-cart-button i {
+    font-size: 1.5em;
+}
+.close-cart-button:hover {
+    color: var(--text-color);
+}
+
+.close-cart-button i {
+    font-size: 1.5em;
+}
+
+#endereco-container {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    /* Cor de fundo suave */
+}
+
+/* Responsividade do Container de Endereço */
+@media (max-width: 768px) {
+    #endereco-container {
+        padding: 5px;
+        margin: 5px;
+    }
+}
+
+#endereco-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+#endereco-container input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+#endereco-container input[type="text"]:read-only {
+    background-color: #eee;
+    /* Cor de fundo para campos readonly */
+    cursor: not-allowed;
+}
+
+/* Responsividade dos Inputs de Texto */
+@media (max-width: 768px) {
+    #endereco-container input[type="text"] {
+        padding: 4px;
+        margin-bottom: 5px;
+    }
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* Estilo do Total e do Botão "Finalizar Pedido" */
+.cart-menu .cart-total-container,
+.cart-menu .checkout-container {
+    position: sticky;
+    bottom: 0;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.cart-menu .cart-total-container p,
+.cart-menu .checkout-container button {
+    margin: 0;
+    text-align: center;
+}
+
+.cart-menu .checkout-container button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-menu .checkout-container button:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .cart-menu .cart-total-container,
+    .cart-menu .checkout-container {
+        padding: 5px;
+    }
+
+    .cart-menu .checkout-container button {
+        padding: 10px;
+        font-size: 1rem;
+    }
+}
+
+/* Aplicar animação de fade in para o cabeçalho */
+.site-header h1 {
+    animation: fadeInDown 1s ease-out;
+}
+
+/* Animação para itens de promoção (salgados) */
+.promotion-item,
+.salgado-item {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.salgado-item {
+    background: var(--background-light);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.salgado-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Animação para botões de promoção */
+.promotion-item button:hover,
+.salgado-item button:hover {
+    animation: pop 0.3s ease-out;
+}
+
+/* Efeito de zoom nas imagens dos salgados */
+.promotion-item img:hover,
+.salgado-item img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de pulso no ícone do carrinho */
+.cart-icon:hover {
+    animation: pulse 0.6s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/* Efeito de brilho no título das promoções */
+#promocoes h2 {
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ff6600;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ff6600;
+    }
+    to {
+        text-shadow: 0 0 20px #ff6600, 0 0 30px #ffcc00, 0 0 40px #ff3300;
+    }
+}
+.decorative-image {
+    position: relative;
+    width: 100%;
+    margin: 20px 0; /* Espaçamento entre seções */
+    text-align: center;
+}
+
+.decorative-image img {
+    width: 100%;
+    max-height: 200px; /* Ajusta a altura sem cortar */
+    height: auto; /* Mantém as proporções originais */
+    display: block;
+    opacity: 0.8; /* Suaviza um pouco */
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .decorative-image img {
+        max-height: 150px; /* Ajusta a altura para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .decorative-image img {
+        max-height: 100px; /* Ajusta a altura para telas muito pequenas */
+    }
+}
